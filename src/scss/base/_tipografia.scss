@@ -18,3 +18,7 @@ h3 {
 .text-center {
     text-align: center;
 }
+
+[class$="__heading"]{
+    @include m.nombre-pagina;
+}

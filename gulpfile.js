@@ -1,4 +1,4 @@
-const { src, dest, watch, parallel } = require('gulp');
+const { src, dest, watch, parallel } = require('gulp');
 
 // CSS
 const sass = require('gulp-sass')(require('sass'));
@@ -69,7 +69,7 @@ function versionAvif( done ) {
     done();
 }
 
-function dev(done) {
+function watchArch(done) {
     watch( paths.scss, css );
     watch( paths.js, javascript );
     watch( paths.imagenes, imagenes)
@@ -83,4 +83,4 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel( css, imagenes, versionWebp, versionAvif, javascript, dev) ;
+exports.default = parallel( css, imagenes, versionWebp, versionAvif, javascript, watchArch);

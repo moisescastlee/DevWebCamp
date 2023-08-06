@@ -1,6 +1,6 @@
 <main class="auth">
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
-    <p class="auth__texto">Recuperar contraseñ</p>
+    <p class="auth__texto">Recuperar tu acceso con WebCam</p>
 
     <form class="formulario" action="">
        
@@ -15,11 +15,11 @@
             >
         </div>
 
-        <input type="submit" class="formulario__submit" value="Iniciar Sesión">
+        <input type="submit" class="formulario__submit" value="Enviar instrucciones">
 
         <div class="acciones">
             <a href="/registro" class="acciones__enlace">¿Aun no tienes una cuenta?</a>
-            <a href="/olvide" class="acciones__enlace">¿Olvidaste tu password?</a>
+            <a href="/login" class="acciones__enlace">Ya tienes cuenta? Inicia Sesion!</a>
         </div>
     </form>
 </main>

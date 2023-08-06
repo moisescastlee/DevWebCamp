@@ -69,7 +69,7 @@ function versionAvif( done ) {
     done();
 }
 
-function watchArch(done) {
+function dev(done) {
     watch( paths.scss, css );
     watch( paths.js, javascript );
     watch( paths.imagenes, imagenes)
@@ -83,4 +83,4 @@ exports.js = javascript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.default = parallel( css, imagenes, versionWebp, versionAvif, javascript, watchArch);
+exports.dev = parallel( css, imagenes, versionWebp, versionAvif, javascript, dev);

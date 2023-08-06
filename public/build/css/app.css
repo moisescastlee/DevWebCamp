@@ -398,11 +398,14 @@ h3 {
   border-radius: 0.3rem;
   width: auto;
   align-self: flex-start;
-  margin-bottom: 2rem;
+  margin: 2rem 0 1rem 0;
 }
 .formulario__submit:hover {
   background-color: #0063c1;
   cursor: pointer;
+}
+.formulario .acciones__enlace {
+  margin-bottom: 5rem;
 }
 
 .acciones {

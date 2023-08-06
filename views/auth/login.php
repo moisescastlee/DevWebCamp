@@ -1,6 +1,6 @@
 <main class="auth">
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
-    <p class="auth__texto">Iniciar Sesión en DevWebCamp Mo</p>
+    <p class="auth__texto">Iniciar Sesión en DevWebCamp</p>
 
     <form class="formulario" action="">
        
@@ -8,7 +8,6 @@
             <label class="formulario__label" for="email">Email</label>
 
             <input type="text"
-                type="email"
                 class="formulario__input"
                 placeholder="Tu email"
                 id="email"
@@ -20,7 +19,6 @@
             <label class="formulario__label" for="email">Password</label>
 
             <input type="password"
-                type="password"
                 class="formulario__input"
                 placeholder="Tu password"
                 id="password"

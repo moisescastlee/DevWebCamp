@@ -4,7 +4,7 @@
             <a href="/registro" class="header__enlace"> Registro</a>
             <a href="/login" class="header__enlace"> Iniciar session</a>
 
-            </nav>
+        </nav>
 
             <div class="header__contenido">
                 <a href="/">

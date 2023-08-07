@@ -355,7 +355,7 @@ h3 {
 }
 
 .auth {
-  width: min(95%, 60rem);
+  width: min(95%, 100rem);
   margin: 0 auto;
 }
 .auth__texto {
@@ -422,16 +422,19 @@ h3 {
 .header {
   min-height: 60rem;
   background-image: url(../img/grafico.svg), url(../img/grafico.svg), linear-gradient(to right, #1a1b15, rgba(26, 27, 21, 0.5)), image-set(url(../img/header.avif) 1x, url(../img/header.webp) 1x, url(../img/header.jpg) 1x);
+  background-repeat: no-repeat;
+  background-size: 400px, 400px, cover, cover;
+  background-position: top left, bottom right;
 }
 .header__contenedor {
-  width: min(95%, 60rem);
+  width: min(95%, 100rem);
   margin: 0 auto;
 }
 .header__navegacion {
   padding: 5rem 0;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 6rem;
 }
 @media (min-width: 768px) {
   .header__navegacion {

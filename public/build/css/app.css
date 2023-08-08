@@ -500,11 +500,26 @@ h3 {
   width: 100%;
   display: inline-block;
   border-radius: 1px;
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
   text-transform: uppercase;
   margin: 2rem 0;
 }
 .header__boton:hover {
   background-color: #009591;
+  cursor: pointer;
+}
+.header__boton:hover {
+  background-color: #0063c1;
   cursor: pointer;
 }
 @media (min-width: 768px) {

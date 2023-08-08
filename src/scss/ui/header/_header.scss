@@ -68,8 +68,10 @@
     }
 
     &__boton {
+
         @include m.boton(v.$secundario, v.$blanco);
         border-radius: 1px;
+        @include m.boton(v.$azul, v.$blanco);
         text-transform: uppercase;
         margin: 2rem 0;
         @include m.tablet{

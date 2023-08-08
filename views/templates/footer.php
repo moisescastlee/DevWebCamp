@@ -1,4 +1,4 @@
-<footer class="footet">
+<footer class="footer">
     <div class="footer__grid">
         <div class="footer__contenido">
             <h3 class="footer__logo">

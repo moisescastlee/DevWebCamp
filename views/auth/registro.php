@@ -2,16 +2,23 @@
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
     <p class="auth__texto">Registrate en DevWebCamp</p>
 
-    <form class="formulario" action="">
+    <?php
+        require_once __DIR__ . '/../templates/alertas.php';
+    ?>
+
+    <form method="POST" action="/registro" class="formulario" action="">
        
         <div class="formulario__campo">
             <label class="formulario__label" for="nombre">Nombre</label>
 
-            <input type="text"
+            <input 
+                type="text"
                 class="formulario__input"
                 placeholder="Tu nombre"
                 id="nombre"
                 name="nombre"
+                value="<?php echo $usuario->nombre; ?>"
+
             >
         </div>
 
@@ -23,17 +30,20 @@
                 placeholder="Tu apellido"
                 id="apellido"
                 name="apellido"
+                value="<?php echo $usuario->apellido; ?>"
             >
         </div>
 
         <div class="formulario__campo">
             <label class="formulario__label" for="email">Email</label>
 
-            <input type="email"
+            <input 
+                type="email"
                 class="formulario__input"
                 placeholder="Tu email"
                 id="email"
                 name="email"
+                value="<?php echo $usuario->email; ?>"
             >
         </div>
 
@@ -41,7 +51,8 @@
         <div class="formulario__campo">
             <label class="formulario__label" for="password">Password</label>
 
-            <input type="password"
+            <input 
+                type="password"
                 class="formulario__input"
                 placeholder="Tu password"
                 id="password"
@@ -52,7 +63,8 @@
         <div class="formulario__campo">
             <label class="formulario__label" for="password2"></label>
 
-            <input type="password"
+            <input 
+                type="password"
                 class="formulario__input"
                 placeholder="Repetir password"
                 id="password2"

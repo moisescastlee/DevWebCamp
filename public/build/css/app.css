@@ -581,7 +581,7 @@ h3 {
 
 .footer {
   background-color: #007df4;
-  margin-top: 5rem;
+  margin-top: 4rem;
   padding-top: 3rem;
   color: #FFFFFF;
 }
@@ -669,5 +669,22 @@ h3 {
   .menu-redes {
     justify-content: flex-end;
   }
+}
+
+.alertas {
+  padding: 1.5rem 1.5rem 1.5rem 3rem;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  font-size: 700;
+}
+.alertas__error {
+  background-color: #ffdcdc;
+  border-left: 0.5rem solid rgb(169, 0, 0);
+  color: rgb(169, 0, 0);
+}
+.alertas__exito {
+  background-color: white;
+  border-left: 0.5rem solid #02db02;
+  color: #02db02;
 }
 /*# sourceMappingURL=app.css.map */

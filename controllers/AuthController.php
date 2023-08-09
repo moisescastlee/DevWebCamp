@@ -223,16 +223,14 @@ class AuthController {
 
         if(empty($usuario)) {
             // No se encontró un usuario con ese token
-            Usuario::setAlerta('error', 'Token No Válido');
+            Usuario::setAlerta('error', 'Token No Válido, La cuenta no se confirmo');
         } else {
             // Confirmar la cuenta
             $usuario->confirmado = 1;
             $usuario->token = '';
             unset($usuario->password2);
-            
             // Guardar en la BD
-            $usuario->guardar();
-
+            $usuario->guardar(); 
             Usuario::setAlerta('exito', 'Cuenta Comprobada Correctamente');
         }
 

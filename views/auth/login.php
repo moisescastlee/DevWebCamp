@@ -5,9 +5,9 @@
     <form class="formulario" action="">
        
         <div class="formulario__campo">
-            <label class="formulario__label" for="email">Email</label>
+            <label for="email" class="formulario__label">Email</label>
 
-            <input type="text"
+            <input type="email"
                 class="formulario__input"
                 placeholder="Tu email"
                 id="email"
@@ -16,7 +16,7 @@
         </div>
 
         <div class="formulario__campo">
-            <label class="formulario__label" for="email">Password</label>
+            <label for="password" class="formulario__label">Password</label>
 
             <input type="password"
                 class="formulario__input"
@@ -27,10 +27,10 @@
         </div>
 
         <input type="submit" class="formulario__submit" value="Iniciar Sesión">
+    </form>
 
-        <div class="acciones">
+    <div class="acciones">
             <a href="/registro" class="acciones__enlace">¿Aun no tienes una cuenta?</a>
             <a href="/olvide" class="acciones__enlace">¿Olvidaste tu password?</a>
         </div>
-    </form>
 </main>

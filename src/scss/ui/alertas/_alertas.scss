@@ -13,11 +13,13 @@
         background-color: lighten(v.$rojo, 60%);
         border-left: .5rem solid v.$rojo;
         color: v.$rojo;
+        border-radius: 3px;
     }
 
     &__exito {
-        background-color: lighten(v.$verde, 60%);
+        background-color: lighten(v.$verde, 40%);
         border-left: .5rem solid v.$verde;
-        color: v.$verde;
+        color: darken(v.$verde, 5);
+        border-radius: 3px;
     }
 }

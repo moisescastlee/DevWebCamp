@@ -4,11 +4,12 @@
     
     @include m.contenido1;
     
-    &__heading {
+    &__texto {
          
     }
 }
 
 .auth__texto {
     font-size: 2rem;
+    text-align: center;
 }

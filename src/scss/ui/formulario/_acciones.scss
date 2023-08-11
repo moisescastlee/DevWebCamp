@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
 
+    &--centrar {
+        justify-content: center;
+    }
+
     &__enlace {
        
         color: v.$negro;
@@ -13,8 +17,4 @@
         text-align: center;
     }
 
-    &--centrar { 
-        
-        text-align: right;
-    }
 }

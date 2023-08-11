@@ -414,14 +414,14 @@ h3 {
   display: flex;
   justify-content: space-between;
 }
+.acciones--centrar {
+  justify-content: center;
+}
 .acciones__enlace {
   color: #1a1b15;
   font-size: 1.4rem;
   font-weight: 300;
   text-align: center;
-}
-.acciones--centrar {
-  text-align: right;
 }
 
 .header {

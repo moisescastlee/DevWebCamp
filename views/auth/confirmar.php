@@ -9,7 +9,7 @@
 
 
         <?php if(isset($alertas['error'])) { ?>
-                <div class="acciones">
+                <div class="acciones acciones--centrar">
                   <a href="/login" class="acciones__enlace">Puedes iniciar sesion.</a>
                 </div>
         <?php } ?>

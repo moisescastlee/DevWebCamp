@@ -2,7 +2,11 @@
     <h2 class="auth__heading"><?php echo $titulo; ?></h2>
     <p class="auth__texto">Iniciar Sesión en DevWebCamp</p>
 
-    <form class="formulario" action="">
+    <?php
+    require_once __DIR__. '/../templates/alertas.php';
+    ?>
+
+    <form method="POST" action="/login" class="formulario" action="">
        
         <div class="formulario__campo">
             <label for="email" class="formulario__label">Email</label>

@@ -304,6 +304,7 @@ template {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -447,6 +448,7 @@ h3 {
   }
 }
 .header__enlace {
+  all: unset;
   color: #FFFFFF;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -454,6 +456,7 @@ h3 {
 }
 .header__enlace:hover {
   color: #007df4;
+  cursor: pointer;
 }
 .header__contenido {
   padding-top: 10rem;
@@ -693,5 +696,100 @@ h3 {
   border-left: 0.5rem solid #02db02;
   color: #02c202;
   border-radius: 3px;
+}
+
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #F8FAFC;
+}
+.dashboard__header {
+  background-color: #1E293B;
+  padding: 3rem;
+}
+.dashboard__header-grid {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .dashboard__header-grid {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.dashboard__logo {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, -0.8rem + 10vw, 3rem);
+}
+@media (min-width: 1024px) {
+  .dashboard__logo {
+    text-align: left;
+    margin: 0;
+  }
+}
+.dashboard__form {
+  display: flex;
+  justify-content: center;
+}
+.dashboard__submit--logout {
+  all: unset;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.dashboard__submit--logout:hover {
+  color: #007df4;
+  cursor: pointer;
+}
+.dashboard__grid {
+  display: flex;
+  flex: 1;
+}
+.dashboard__sidebar {
+  background-color: #2a3953;
+  width: 12.5rem;
+}
+.dashboard__menu {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dashboard__enlace {
+  color: #6f8ab6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  transition: 400ms background-color ease-in-out, 300ms color ease, 300ms border-radius ease;
+  border-radius: 0.4rem;
+}
+.dashboard__enlace:hover {
+  background-color: #40587f;
+  color: #FFFFFF;
+  border-radius: 2rem;
+}
+.dashboard__icono {
+  font-size: 2rem;
+}
+.dashboard__menu-texto {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.dashboard__contenido {
+  padding: 1rem 1rem 3rem 1rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .dashboard__contenido {
+    padding: 1rem 5rem 3rem 5rem;
+  }
 }
 /*# sourceMappingURL=app.css.map */

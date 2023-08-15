@@ -62,7 +62,6 @@ class AuthController {
             $_SESSION = [];
             header('Location: /');
         }
-       
     }
 
     public static function registro(Router $router) {
@@ -239,8 +238,6 @@ class AuthController {
             $usuario->guardar(); 
             Usuario::setAlerta('exito', 'Cuenta Comprobada Correctamente');
         }
-
-     
 
         $router->render('auth/confirmar', [
             'titulo' => 'Confirma tu cuenta DevWebcamp',

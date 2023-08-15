@@ -1,6 +1,6 @@
-<header class="dashoard__header">
-    <div class="dashboard--header-grid">
-        <a href="/admin/dashboard/">
+<header class="dashboard__header">
+    <div class="dashboard__header-grid">
+        <a href="/">
             <h2 class="dashboard__logo">
                 &#60;DevWebCam />
             </h2>

@@ -35,7 +35,7 @@ class AuthController {
                         $_SESSION['admin'] = $usuario->admin ?? null;
 
                         if($usuario->admin) {
-                            header('Location: /admin/dashboard/');
+                            header('Location: /admin/dashboard');
                         } else {
                             header('Location: /finalizar-registro');
                         }

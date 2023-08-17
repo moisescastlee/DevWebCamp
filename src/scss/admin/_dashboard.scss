@@ -101,7 +101,21 @@
         }
     }
 
-
-
+    &__contenedor--boton {
+        @include m.tablet {
+            display: flex;
+            justify-content: flex-end;
+        }
+       
+    }
+    &__boton {
+        @include m.boton(v.$azul, v.$blanco);
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        border-radius: .5rem;
+        @include m.tablet{
+            width: auto;
+        }
+    }
     
 }

@@ -72,7 +72,8 @@
         border-radius: .4rem;
         
 
-        &:hover {
+        &:hover,
+        &--actual {
             background-color: lighten(v.$gris-oscuro, 20);
             color: v.$blanco;
             border-radius: 2rem;
@@ -99,6 +100,8 @@
             padding: 1rem 5rem 3rem 5rem;
         }
     }
+
+
 
     
 }

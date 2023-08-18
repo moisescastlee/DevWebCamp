@@ -18,6 +18,7 @@ class PonentesController {
         $alertas = [];
         $router->render('admin/ponentes/crear', [
             'titulo' => 'Ponentes crear / Conferencistas',
+            'alertas' => $alertas
         ]);
         
     }

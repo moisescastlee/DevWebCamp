@@ -5,6 +5,21 @@
     display: flex;
     flex-direction: column;
 
+    &__fieldset {
+        border: none;
+        margin-top: 1rem;
+        padding: 0;
+
+    }
+
+    &__legend {
+        color: v.$gris;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+
+
+    }
+
     &__campo {
         display: flex;
         flex-direction: column;
@@ -25,9 +40,12 @@
     &__submit{
         @include m.boton(v.$azul, v.$blanco);
         border-radius: .3rem;
-        width: auto;
+        
         align-self: flex-start;
-        margin: 2rem 0 1rem 0;
+      
+        &--registrar {
+            width: 100;
+        }
     }
     .acciones__enlace {
         margin-bottom: 5rem;

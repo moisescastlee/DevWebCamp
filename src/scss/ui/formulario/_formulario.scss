@@ -17,7 +17,6 @@
         font-size: 2rem;
         margin-bottom: 2rem;
 
-
     }
 
     &__campo {
@@ -26,21 +25,51 @@
         gap: 1rem;
         margin: 1.5rem 0;
     }
+    &__contenedor-icono{
+        display: flex;
+        border-radius: 1rem;
+    }
+
+    &__icono {
+        background-color: v.$gris-oscuro;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px 0 0 5px;
+    
+        i {
+            color: v.$blanco;
+            font-size: 2rem;
+        }
+    }
+
     &__label {
         display: block;
         font-size: 1.8rem;
         color: rgba(v.$negro, .8);   
     }
+
     &__input {
        padding: 1rem;
        border: 1px solid darken(v.$gris-claro, 20);
-       border-radius: .5rem;
-       outline: none;
+
+       &--file {
+        border: none;
+       }
+
+       &--sociales {
+         @extend .formulario__input; 
+         flex: 1;
+         border-top-left-radius: 0;
+         border-bottom-left-radius: 0;
+       }
     }
+
+
     &__submit{
         @include m.boton(v.$azul, v.$blanco);
         border-radius: .3rem;
-        
         align-self: flex-start;
       
         &--registrar {

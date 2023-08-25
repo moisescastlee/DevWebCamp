@@ -65,16 +65,16 @@
     <legend class="formulario__legend">Informacion Extra</legend>
 
     <div class="formulario__campo">
-        <label for="tags__input">Area de Experiencias (separadas por coma) </label>
+        <label for="tags_input" class="formulario__label">Area de Experiencias (separadas por coma)</label>
         
         <input 
         type="text"
         class="formulario__input"
         id="tags_input"
-        placeholder="Ej. Node.js, PHP, CSS, CSS, Laravel, UX/UI"
+        placeholder="Ej:. Node.js, PHP, CSS, Laravel, UX/UI"
         >
 
-        <div id="tags" class="formulario__listado"> </div>
+        <div id="tags" class="formulario__listado"></div>
         <input type="hidden" name="tags" value="<?php echo $ponente->tags ?? ''; ?>">
     </div>
 

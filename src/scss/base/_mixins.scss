@@ -162,3 +162,31 @@
 @mixin shadow {
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
+
+@mixin reset-lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+@mixin tags {
+    @include reset-lista;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+    > li {
+        background-color: v.$azul;
+        padding: 1rem;
+        border-radius: 4px;
+        color: v.$blanco;
+        font-size: 1.4rem;
+        font-weight: v.$bold;
+    }
+    :hover {
+        background-color: lighten(v.$azul, 7);
+    }
+
+}

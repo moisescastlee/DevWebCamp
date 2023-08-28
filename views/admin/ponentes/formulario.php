@@ -14,7 +14,7 @@
     </div>
 
     <div class="formulario__campo">
-        <label for="apellido">Nombre</label>
+        <label for="apellido">Apellido</label>
         <input 
         type="text"
         class="formulario__input"

@@ -59,6 +59,15 @@
         
         >
     </div>
+
+    <?php if(isset($ponente->imagen_actual)) { ?>
+      <p class="formulario__texto">Imagen Actual</p>
+      <div class="formulario__imagen">
+          <img src="<?php echo $_ENV['HOST'] . '/imagen/speakers/' . $ponente->imagen; ?>.png" alt="Texto ponente">
+      </div>
+
+    <?php }?>
+
 </fieldset>
 
 <fieldset class="formulario__fieldset">

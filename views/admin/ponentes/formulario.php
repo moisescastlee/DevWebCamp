@@ -61,9 +61,14 @@
     </div>
 
     <?php if(isset($ponente->imagen_actual)) { ?>
-      <p class="formulario__texto">Imagen Actual</p>
+      <p class="formulario__texto">Imagen Actual:</p>
       <div class="formulario__imagen">
-          <img src="<?php echo $_ENV['HOST'] . '/imagen/speakers/' . $ponente->imagen; ?>.png" alt="Texto ponente">
+        <picture>
+        <source srcset="<?php echo $_ENV['HOST'] . '/imagenes/speakers/' . $ponente->imagen; ?>.webp" type="image/webp/">
+
+
+          <img src="<?php echo $_ENV['HOST'] . '/imagenes/speakers/' . $ponente->imagen; ?>.png" alt="Texto ponente">
+        </picture>
       </div>
 
     <?php }?>

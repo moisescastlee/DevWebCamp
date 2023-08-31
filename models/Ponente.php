@@ -14,6 +14,7 @@ class Ponente extends ActiveRecord {
         public $imagen;
         public $tags;
         public $redes;
+        public $imagen_actual;
         
         
 

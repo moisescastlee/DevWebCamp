@@ -77,6 +77,7 @@ class PonentesController {
     }
 
     public static function editar(Router $router){
+        
         $alertas = [];
         //validar el id
         $id = $_GET['id'];
@@ -91,7 +92,7 @@ class PonentesController {
         if(!$ponente) {
             header('Location: /admin/ponentes');
         }
-
+        
         $ponente->imagen_actual = $ponente->imagen;
         
         $router->render('admin/ponentes/editar', [

@@ -71,7 +71,9 @@ class PonentesController {
         $router->render('admin/ponentes/crear', [
             'titulo' => 'Ponentes crear / Conferencistas',
             'alertas' => $alertas,
-            'ponente' => $ponente
+            'ponente' => $ponente,
+            'redes' => json_decode($ponente->redes)
+
         ]);
         
     }
@@ -94,11 +96,53 @@ class PonentesController {
         }
         
         $ponente->imagen_actual = $ponente->imagen;
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            
+            if(!empty($_FILES['imagen']['tmp_name'])){
+                
+                $carpetas_imagenes = '../public/imagenes/speakers';
+
+                // Crear la carpeta si no existe.
+                if(!is_dir($carpetas_imagenes)) {
+                    mkdir($carpetas_imagenes, 0755, true);
+                }
+                     $imagen_png = Image::make($_FILES['imagen']['tmp_name'])->fit(800,800)->encode('png', 80);
+                     $imagen_webp = Image::make($_FILES['imagen']['tmp_name'])->fit(800,800)->encode('webp', 80);
+
+                $nombre_imagen = md5(uniqid(rand(), true));
+                
+                $_POST['imagen'] = $nombre_imagen;
+
+            } else {
+                $_POST['imagen'] = $ponente->imagen_actual;
+            }   
+
+            $_POST['redes'] = json_encode($_POST['redes'], JSON_UNESCAPED_SLASHES);
+            
+            $ponente->sincronizar($_POST);
+
+            $alertas = $ponente->validar();
+
+            if(empty($alertas)) {
+                if(isset($nombre_imagen)) {
+                    $imagen_png->save($carpetas_imagenes . '/' . $nombre_imagen . ".png");
+                    $imagen_webp->save($carpetas_imagenes . '/' . $nombre_imagen . ".webp");
+                }
+
+                $resultado = $ponente->guardar();
+
+                if($resultado) {
+                    header('Location: /admin/ponentes');
+                }
+            }   
+        }
         
         $router->render('admin/ponentes/editar', [
             'titulo' => 'Actualizar ponente',
             'alertas' => $alertas,
-            'ponente' => $ponente
+            'ponente' => $ponente,
+            'redes' => json_decode($ponente->redes)
         ]);
     }
 }

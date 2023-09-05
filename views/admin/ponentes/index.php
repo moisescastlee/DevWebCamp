@@ -23,8 +23,8 @@
             <tbody class="table__tbody">
                 <?php foreach($ponentes as $ponente) {?>
                     <tr class="table__tr">
-                        <td class="table__td">
-                            <?php echo $ponente->nombre . " " . $ponente->apellido; ?>
+                        <td class="table__td"> <a class="a" href="/admin/ponentes/editar?id= <?php echo $ponente->id; ?>">
+                           <?php echo $ponente->nombre . " " . $ponente->apellido; ?> </a>
                         </td>
 
                         <td class="table__td">

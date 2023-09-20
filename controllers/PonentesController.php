@@ -20,33 +20,26 @@ class PonentesController {
         }
 
         $registros_por_pagina = 10;
-
         $total = Ponente::total();
-
-        debuguear(count($total));
-
-        $total = 100;
-
         $paginacion = new Paginacion($pagina_actual, $registros_por_pagina, $total);
-
-        debuguear($paginacion);
         
         $ponentes = Ponente::all();
 
-        if(is_admin()) {
+        if(!is_admin()) {
             header('Location: /login');
         }
 
         $router->render('admin/ponentes/index', [
             'titulo' => 'Ponentes / Conferencistas',
             'ponentes' => $ponentes,
+            'paginacion' => $paginacion->paginacion()
         ]);
         
     }
 
     public static function crear(Router $router){
 
-        if(is_admin()) {
+        if(!is_admin()) {
             header('Location: /login');
         }
 
@@ -112,7 +105,7 @@ class PonentesController {
 
     public static function editar(Router $router){
 
-        if(is_admin()) {
+        if(!is_admin()) {
             header('Location: /login');
         }
         

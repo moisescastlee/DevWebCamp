@@ -137,7 +137,8 @@ class ActiveRecord {
         $resultado = self::$db->query($query);
         $total = $resultado->fetch_array();
 
-        debuguear($total);
+        return array_shift($total);
+
     }
 
     // crea un nuevo registro

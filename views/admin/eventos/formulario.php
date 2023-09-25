@@ -2,13 +2,12 @@
     <legend class="formulario__legend">Informacion eventos</legend>
     
     <div class="formulario__campo">
-        <label for="nombre" class="formulario__label">Nombre Evento</label>
+        <label for="nombre" class="formulario__label">Nombre Eventos</label>
         <input 
-        type="text"
         class="formulario__input"
-        id="nombre"
-        name="nombre"
-        placeholder="Nombre Evento"
+        id="descripcion"
+        name="descripcion"
+        placeholder="Nombre Eventos"
         >
     </div>
 
@@ -24,17 +23,11 @@
     </div>
 
     <div class="formulario__campo">
-       <label for="categoria" class="formulario__label">Categoria o tipo de evento</label>
-       <select
-       class="formulario__select"
-       id="categoria"
-       name="categoria_id"
-       >
-            <opcion value="">- Seleccionar -</opcion>
+       <label for="descripcion" class="formulario__label">Categoria o tipo de evento</label>
+       <select>
             <?php foreach($categorias as $categoria) { ?> 
-                <opcion value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre;?></opcion>
+                <opcion value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></opcion>
             <?php } ?>
-
        </select>
     </div>
 

@@ -9,5 +9,4 @@ protected static $columnasDB = ['id', 'nombre'];
 public $id;
 public $nombre;
 
-
 }

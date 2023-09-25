@@ -3,7 +3,7 @@
 <div class="dashboard__contenedor--boton">
     <a class="dashboard__boton" href="/admin/ponentes/crear">
         <i class="fa-solid fa-circle-plus">
-            Anadir Ponentes
+            Añadir Ponentes
         </i>
     </a>
 </div>

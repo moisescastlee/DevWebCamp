@@ -408,6 +408,7 @@ h3 {
 .formulario__input, .formulario__input--sociales, .formulario__select--sociales, .formulario__select {
   padding: 1rem;
   border: 1px solid #b1c7dd;
+  border-radius: 0.5rem;
 }
 .formulario__input--file, .formulario__select--file {
   border: none;
@@ -416,6 +417,10 @@ h3 {
   flex: 1;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+.formulario__radio {
+  display: flex;
+  gap: 2rem;
 }
 .formulario__texto {
   margin-top: 3rem;

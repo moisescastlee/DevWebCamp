@@ -54,6 +54,7 @@
     &__select {
        padding: 1rem;
        border: 1px solid darken(v.$gris-claro, 20);
+       border-radius: .5rem;
 
        &--file {
         border: none;
@@ -65,6 +66,11 @@
          border-top-left-radius: 0;
          border-bottom-left-radius: 0;
        }
+    }
+
+    &__radio {
+        display: flex;
+        gap: 2rem;
     }
 
     &__texto {

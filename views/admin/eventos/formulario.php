@@ -54,5 +54,39 @@
         </div>
   </div>
 
+  <div id="hora" class="formulario__campo">
+    <label class="formulario__label">Seleccionar Hora</label>
+      
+      <ul class="horas">
+          <?php foreach($horas as $hora) { ?>
+              <li class="horas__hora"><?php echo $hora->hora; ?></li>
+          <?php } ?>  
+      </ul>
+  </div>
+</fieldset>
+
+<fieldset class="formulario__fieldset">
+      <legend class="formulario__legend">Informacion Extra</legend>
+
+      <div class="formulario__campo">
+        <label for="ponentes" class="formulario__label">Ponente</label>
+        <input 
+        class="formulario__input"
+        id="ponentes"
+        placeholder="Buscar ponente"
+        >
+    </div>
+
+    <div class="formulario__campo">
+        <label for="disponibles" class="formulario__label">Lugares disponibles</label>
+        <input 
+        type="number"
+        min="1"
+        class="formulario__input"
+        id="disponibles"
+        name="disponibles"
+        placeholder="Ej. 20"
+        >
+    </div>
 </fieldset>
 

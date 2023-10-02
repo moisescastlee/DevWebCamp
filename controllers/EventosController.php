@@ -6,7 +6,7 @@ use Model\Dia;
 use Model\Hora;
 use MVC\Router;
 use Model\Categoria;
-
+use Model\Evento;
 
 class EventosController {
 
@@ -23,8 +23,7 @@ class EventosController {
         $categorias = Categoria::all();
         $dias = Dia::all('ASC');
         $horas = Hora::all('ASC');
-
-        
+        $eventos = Evento::all();
 
         $router->render('admin/eventos/crear', [
             'titulo' => 'Registrar Eventos',

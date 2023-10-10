@@ -53,7 +53,7 @@ class PonentesController {
 
         if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-            if(is_admin()) {
+            if(!is_admin()) {
                 header('Location: /login');
             }
 
@@ -131,10 +131,6 @@ class PonentesController {
         $ponente->imagen_actual = $ponente->imagen;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-            if(is_admin()) {
-                header('Location: /login');
-            }
             
             if(!empty($_FILES['imagen']['tmp_name'])){
                 

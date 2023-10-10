@@ -16,6 +16,7 @@
                 placeholder="Tu email"
                 id="email"
                 name="email"
+                value=""
             >
         </div>
 

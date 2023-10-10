@@ -8,6 +8,7 @@
         id="nombre"
         name="nombre"
         placeholder="Nombre Evento"
+        value="<?php echo $evento->nombre; ?>"
         >
     </div>
 
@@ -52,12 +53,14 @@
                 </div>
             <?php } ?>
         </div>
+
+        <input type="hidden" name="dia_id" value="">
   </div>
 
   <div id="hora" class="formulario__campo">
     <label class="formulario__label">Seleccionar Hora</label>
       
-      <ul class="horas">
+      <ul id="horas" class="horas">
           <?php foreach($horas as $hora) { ?>
               <li class="horas__hora"><?php echo $hora->hora; ?></li>
           <?php } ?>  

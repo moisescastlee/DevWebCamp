@@ -49,7 +49,7 @@
                             id="<?php echo strtolower($dia->nombre); ?>"
                             name="dia"
                             value="<?php echo $dia->id; ?>"
-                            />
+                        />
                 </div>
             <?php } ?>
         </div>

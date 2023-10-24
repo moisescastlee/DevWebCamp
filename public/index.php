@@ -57,7 +57,6 @@ $router->post('/admin/eventos/crear', [EventosController::class, 'crear']);
 //API
 $router->get('/api/eventos-horario', [APIEventos::class, 'index']);
 
-
 //Registrados
 $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 

@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-
+use Model\EventoHorario;
 
 class APIEventos {
 
@@ -16,6 +16,10 @@ class APIEventos {
 
         if(!$dia_id || !$categoria_id) {
             echo json_encode([]);
+            return;
         }
+
+        $eventos = EventoHorario ::whereArray(['dia_id' => $dia_id, 'categoria_id' => $categoria_id]); 
+
     }
 }

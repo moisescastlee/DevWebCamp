@@ -133,6 +133,23 @@ class ActiveRecord {
     }
 
     // Busqueda Where con Columna 
+    public static function whereArray($array = []) {
+        $query = "SELECT * FROM " . static::$tabla . " WHERE ";
+        
+        foreach($array as $key => $value) {
+            if($key == array_key_last($array)) {
+                $query .= " $key = '$value'";
+            } else {
+                $query .= " $key = '$value' AND ";
+            } 
+            
+        } 
+        
+        $resultado = self::consultarSQL($query);
+        return array_shift( $resultado ) ;
+    }
+
+    //traer total de registros
     public static function where($columna, $valor) {
         $query = "SELECT * FROM " . static::$tabla . " WHERE $columna = '$valor'";
         $resultado = self::consultarSQL($query);

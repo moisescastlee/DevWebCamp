@@ -19,7 +19,8 @@ class APIEventos {
             return;
         }
 
-        $eventos = EventoHorario ::whereArray(['dia_id' => $dia_id, 'categoria_id' => $categoria_id]); 
+        $eventos = EventoHorario ::whereArray(['dia_id' => $dia_id, 'categoria_id' => $categoria_id]) ?? [];
+        echo json_encode($eventos);
 
     }
 }

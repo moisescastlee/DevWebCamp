@@ -142,11 +142,9 @@ class ActiveRecord {
             } else {
                 $query .= " $key = '$value' AND ";
             } 
-            
         } 
-        
         $resultado = self::consultarSQL($query);
-        return array_shift( $resultado ) ;
+        return $resultado;
     }
 
     //traer total de registros

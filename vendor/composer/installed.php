@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'a9bd00c5393d30b372933ac02c18e99aa051e6b1',
+        'reference' => '8d33f110466872a78d8a319c8d7804b2de204b43',
         'name' => 'juandelatorre/devwebcamp',
         'dev' => true,
     ),
@@ -43,7 +43,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'a9bd00c5393d30b372933ac02c18e99aa051e6b1',
+            'reference' => '8d33f110466872a78d8a319c8d7804b2de204b43',
             'dev_requirement' => false,
         ),
         'phpmailer/phpmailer' => array(

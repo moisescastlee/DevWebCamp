@@ -75,9 +75,10 @@
       <div class="formulario__campo">
         <label for="ponentes" class="formulario__label">Ponente</label>
         <input 
-        class="formulario__input"
-        id="ponentes"
-        placeholder="Buscar ponente"
+             type="text"
+             class="formulario__input"
+             id="ponentes"
+             placeholder="Buscar ponentes"
         >
     </div>
 
@@ -90,6 +91,7 @@
         id="disponibles"
         name="disponibles"
         placeholder="Ej. 20"
+        value="<?php echo $evento->disponibles; ?>"
         >
     </div>
 </fieldset>

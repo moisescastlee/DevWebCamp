@@ -9,9 +9,11 @@
 
         async function obtenerPonentes() {
 
-           const url = `/api/eventos-horario?dia_id=${dia}&categoria_id=${categoria_id}`;
+           const url = `/api/ponentes`;
            const resultado = await fetch(url);
            const eventos = await resultado.json();
+
+           console.log(eventos);
            
         }
     }

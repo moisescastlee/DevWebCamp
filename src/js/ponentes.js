@@ -7,15 +7,35 @@
 
         obtenerPonentes();
 
+        ponentesInput.addEventListener('input', buscarPonentes)
+
         async function obtenerPonentes() {
 
            const url = `/api/ponentes`;
-           const resultado = await fetch(url);
-           const eventos = await resultado.json();
+           const respuesta = await fetch(url);
+           const resultado = await respuesta.json();
 
-           console.log(eventos);
-           
+            formatearPonentes(resultado)
         }
+
+        function formatearPonentes(arrayPonentes = []) {
+            ponentes = arrayPonentes.map( ponente => {
+                return {
+                    nombre: `${ponente.nombre.trim()} ${ponente.apellido.trim()}`,
+                        id: ponente.id
+
+                }
+            }) 
+         } 
+
+        function buscarPonentes(e) {
+            
+            const busqueda = e.target.value;
+
+            if(busqueda.length > 3) {
+                const expresion = new RegExp(busqueda, "i");
+            }
+         }
     }
 
 })();

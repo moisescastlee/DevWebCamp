@@ -80,6 +80,7 @@
              id="ponentes"
              placeholder="Buscar ponentes"
         >
+        <ul id="listado-ponentes" class="listado-ponentes"></ul>
     </div>
 
     <div class="formulario__campo">

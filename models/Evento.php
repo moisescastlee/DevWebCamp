@@ -2,6 +2,7 @@
 
 namespace Model;
 
+#[\AllowDynamicProperties]
 class Evento extends ActiveRecord {
 
 protected static $tabla = 'eventos';

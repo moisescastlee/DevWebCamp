@@ -1,6 +1,7 @@
 <?php 
 namespace Model;
 
+#[\AllowDynamicProperties]
 class Categoria extends ActiveRecord {
 
 protected static $tabla = 'categorias';

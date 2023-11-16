@@ -46,8 +46,8 @@
                                     Eliminar
                                 </button>
                             </form>
-
                         </td>
+                        
                     </tr>
 
                 <?php } ?>

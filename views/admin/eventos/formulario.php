@@ -19,23 +19,23 @@
         id="descripcion"
         name="descripcion"
         placeholder="Descripcion Evento"
-        rows="8"
-        ></textarea>
+        rows="4"
+        ><?php echo $evento->descripcion; ?></textarea>
     </div>
 
   <div class="formulario__campo">
-   <label for="categoria" class="formulario__label">Categoría o Tipo de Evento</label>
-    <select
-        class="formulario__select"
-        id="categoria"
-        name="categoria_id"
+        <label for="categoria" class="formulario__label">Categoría o Tipo de Evento</label>
+        <select
+            class="formulario__select"
+            id="categoria"
+            name="categoria_id"
         >
-        <option value="">- Seleccionar -</option>
-        <?php foreach($categorias as $categoria) { ?>
-          <option value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></option>
-        <?php } ?>
-    </select>
-  </div>   
+            <option value="">- Seleccionar -</option>
+            <?php foreach($categorias as $categoria) { ?>
+                <option <?php echo ($evento->categoria_id === $categoria->id) ? 'selected' : '' ?> value="<?php echo $categoria->id; ?>"><?php echo $categoria->nombre; ?></option>
+            <?php } ?>
+        </select>
+    </div>
 
   <div class="formulario__campo">
    <label for="categoria" class="formulario__label">Seleccione el dia</label>
@@ -49,12 +49,13 @@
                             id="<?php echo strtolower($dia->nombre); ?>"
                             name="dia"
                             value="<?php echo $dia->id; ?>"
+                            <?php echo ($evento->dia_id === $dia->id) ? 'checked' : ''; ?>
                         />
                 </div>
             <?php } ?>
         </div>
 
-        <input type="hidden" name="dia_id" value="">
+        <input type="hidden" name="dia_id" value="<?php echo $evento->dia_id; ?>">
   </div>
 
   <div id="hora" class="formulario__campo">
@@ -79,6 +80,7 @@
              class="formulario__input"
              id="ponentes"
              placeholder="Buscar ponentes"
+             value="<?php echo $evento->nombre; ?>"
         >
         <ul id="listado-ponentes" class="listado-ponentes"></ul>
 

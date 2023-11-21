@@ -10,7 +10,7 @@ use Model\Categoria;
 use Model\Evento;
 use Model\Ponente;
 
-
+#[\AllowDynamicProperties]
 class EventosController  {
 
     public static function index(Router $router){

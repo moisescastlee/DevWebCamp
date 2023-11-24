@@ -20,6 +20,7 @@ class EventosController  {
 
         if(!$pagina_actual || $pagina_actual < 1) {
             header('Location: /admin/eventos?page=1');
+
         }
 
         $por_pagina = 10;
@@ -34,8 +35,9 @@ class EventosController  {
             $evento->ponente = Ponente::find($evento->ponente_id);
             $evento->hora = Hora::find($evento->hora_id);
         }
-      
-        
+        if(!is_admin()) {
+            header('Location: /login');
+        }
 
         $router->render('admin/eventos/index', [
             'titulo' => 'Conferencias / WorkShops',
@@ -46,6 +48,9 @@ class EventosController  {
     }
 
     public static function crear(Router $router) {
+        if(!is_admin()) {
+            header('Location: /login');
+        }
 
         $alertas = [];
         
@@ -56,6 +61,9 @@ class EventosController  {
         $evento = New evento;
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            if(!is_admin()) {
+                header('Location: /login');
+            }
             
             $evento->sincronizar($_POST);
 
@@ -80,6 +88,9 @@ class EventosController  {
     }
 
     public static function editar(router $router) {
+        if(!is_admin()) {
+            header('Location: /login');
+        }
 
         $alertas = [];
         $id = $_GET['id'];
@@ -99,7 +110,9 @@ class EventosController  {
         }
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            
+            if(!is_admin()) {
+                header('Location: /login');
+            }
             $evento->sincronizar($_POST);
 
             $alertas = $evento->validar();
@@ -125,7 +138,23 @@ class EventosController  {
     }
 
     public static function eliminar(router $router) {
+        
+        if($_SERVER['REQUEST_METHOD'] === 'POST' ){
+            if(!is_admin()) {
+                header('Location: /login');
+            }
+            $id = $_POST['id'];
+            $evento = Evento::find($id);
 
+            if(!isset($evento) ) {
+                header('Location: /admin/eventos');
+            }
 
+            $resultado = $evento->eliminar();
+
+            if($resultado) {
+                header('Location: /admin/eventos');
+            }
+        }
     }
 }

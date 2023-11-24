@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use Classes\Paginacion;
 use MVC\Router;
 use Controllers\APIEventos;
 use Controllers\APIPonentes;
@@ -11,6 +12,7 @@ use Controllers\RegalosController;
 use Controllers\PonentesController;
 use Controllers\DashboardController;
 use Controllers\RegistradosController;
+use Controllers\PaginasController;
 
 
 $router = new Router();
@@ -60,6 +62,7 @@ $router->post('/admin/eventos/eliminar', [EventosController::class, 'eliminar'])
 //API
 $router->get('/api/eventos-horario', [APIEventos::class, 'index']);
 $router->get('/api/ponentes', [APIPonentes::class, 'index']);
+$router->get('/api/ponente', [APIPonentes::class, 'ponente']);
 
 
 //Registrados
@@ -67,6 +70,13 @@ $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 
 //Regalos
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
+
+//Areas Publicas
+$router->get('/', [PaginasController::class, 'index']);
+$router->get('/devwebcam', [PaginasController::class, 'evento']);
+$router->get('/paquetes', [PaginasController::class, 'paquetes']);
+$router->get('/workshops-conferencias', [PaginasController::class, 'conferencia']);
+
 
 $router->comprobarRutas();
 

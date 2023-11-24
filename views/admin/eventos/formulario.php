@@ -80,11 +80,10 @@
              class="formulario__input"
              id="ponentes"
              placeholder="Buscar ponentes"
-             value="<?php echo $evento->nombre; ?>"
         >
         <ul id="listado-ponentes" class="listado-ponentes"></ul>
 
-        <input type="hidden" name="ponente_id" value="">
+        <input type="hidden" name="ponente_id" value="<?php echo $evento->ponente_id; ?>">
     </div>
 
     <div class="formulario__campo">

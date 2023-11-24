@@ -17,19 +17,17 @@
            } 
 
         if(!Object.values(busqueda).includes('')) {
-            async function iniciarApp() {
+            (async() => {
                 await buscarEventos();
-
+                
                 const id = inputHiddenHora.value;
-    
-                //Resaltar la hora actual
+                    //Resaltar la hora actual
                 const horaSeleccionada = document.querySelector(`[data-hora-id="${id}"]`)
-    
                 horaSeleccionada.classList.remove('horas__hora--deshabilitada')
                 horaSeleccionada.classList.add('horas__hora--seleccionada')
-                
-            }
-           iniciarApp();
+
+                horaSeleccionada.onclick = seleccionarHora;
+            })()
         }
 
        function terminoBusqueda(e) {

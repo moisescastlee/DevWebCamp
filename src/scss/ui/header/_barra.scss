@@ -3,22 +3,27 @@
 
 .barra {
     background-color: v.$azul;
+    box-shadow: 0 0 5px rgba($color: #0a6cff, $alpha: 2.0);
 
     &__contenido {
         @include m.contenedor;
         display: flex;
         flex-direction: column;
+        width: min(100%, 140rem);
+        
+        
+
         @include m.desktop {
             align-items: center;
             flex-direction: row;
             justify-content: space-between;
-
         }
+
     }
+
 
     &__logo{
         @include m.logo;
         @include m.texto-fluido(2rem, 3rem);
-
     }
 }

@@ -406,8 +406,60 @@ h3 {
   }
 }
 
-.paquete .__elementos {
+.paquete {
+  background-color: #f4faff;
+  transition-property: background-color;
+  transition-duration: 0.7s;
+  border: 3px solid white;
+  border-radius: 7px;
+  padding: 3rem;
+}
+.paquete:hover {
+  background-color: #dbedff;
+  transition-property: background-color;
+  transition-duration: 0.7s;
+}
+.paquete__nombre {
+  font-weight: 900;
+  font-size: 2.6rem;
+  margin: 2rem 0;
+}
+.paquete__lista {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  line-height: 2;
+}
+.paquete__precio {
+  text-align: center;
+  font-size: 6rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 5px;
+  margin: 3rem 0 0 0;
+  transition-property: background-color;
+  transition-duration: 0.7s;
+  color: #007df4;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 0 5rem #dbedff;
+}
+.paquete__precio:hover {
+  background-color: #eaf5ff;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+.paquete__precio:active {
+  background-color: #09fd09;
+  color: #FFFFFF;
+  box-shadow: 0 0 20px #c2c2c2;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
 
 .formulario {
@@ -687,12 +739,14 @@ h3 {
 
 .barra {
   background-color: #007df4;
+  box-shadow: 0 0 5px #0a6cff;
 }
 .barra__contenido {
   width: min(90%, 140rem);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  width: min(100%, 140rem);
 }
 @media (min-width: 1024px) {
   .barra__contenido {
@@ -730,10 +784,18 @@ h3 {
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
+  transition-property: background-color;
+  transition-duration: 0.8s;
+  box-shadow: 0 0 1px #0a6cff;
+  border-radius: 2px;
 }
 .navegacion__enlace:hover {
   color: #007df4;
-  background-color: #FFFFFF;
+  background-color: #d0e8ff;
+  transition-property: background-color;
+  transition-duration: 0.8s;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(194, 194, 194, 0.5);
 }
 
 .footer {

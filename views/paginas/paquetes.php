@@ -6,36 +6,36 @@
         <div class="paquete">
             <h3 class="paquete__nombre">Pase Gratis</h3>
             <ul class="paquete__lista">
-                <li class="paquete__elementos">Acceso Virtual a DevWebCamp</li>
+                <li class="paquete__elemento">Acceso Virtual a DevWebCamp</li>
             </ul>
 
-            <a href="" class="paquetes__">$O</a>
+            <p href="" class="paquete__precio">$O</p>
         </div>
 
         <div class="paquete">
             <h3 class="paquete__nombre">Pase Presencial</h3>
             <ul class="paquete__lista">
-                <li class="paquete__elementos">Acceso Presencial a DevWebCamp</li>
-                <li class="paquete__elementos">Pase por 2 dias</li>
-                <li class="paquete__elementos">Acceso a Talleres y Conferencias</li>
-                <li class="paquete__elementos">Acceso a las grabaciones</li>
-                <li class="paquete__elementos">Camisa del evento</li>
-                <li class="paquete__elementos">Comida y bebida</li>
+                <li class="paquete__elemento">Acceso Presencial a DevWebCamp</li>
+                <li class="paquete__elemento">Pase por 2 dias</li>
+                <li class="paquete__elemento">Acceso a Talleres y Conferencias</li>
+                <li class="paquete__elemento">Acceso a las grabaciones</li>
+                <li class="paquete__elemento">Camisa del evento</li>
+                <li class="paquete__elemento">Comida y bebida</li>
             </ul>
 
-            <a href="" class="paquetes__">$199</a>
+            <p href="" class="paquete__precio">$199</p>
         </div>
 
         <div class="paquete">
             <h3 class="paquete__nombre">Pase Virtual</h3>
             <ul class="paquete__lista">
-                <li class="paquete__elementos">Acceso Virtual a DevWebCamp</li>
-                <li class="paquete__elementos">Pase por 2 dias</li>
-                <li class="paquete__elementos">Enlace a Talleres y Conferencias</li>
-                <li class="paquete__elementos">Acceso a las grabaciones</li>
+                <li class="paquete__elemento">Acceso Virtual a DevWebCamp</li>
+                <li class="paquete__elemento">Pase por 2 dias</li>
+                <li class="paquete__elemento">Enlace a Talleres y Conferencias</li>
+                <li class="paquete__elemento">Acceso a las grabaciones</li>
             </ul>
 
-            <a href="" class="paquetes__">$49</a>
+            <p href="" class="paquete__precio">$49</p>
         </div>
     </div>
 </main>

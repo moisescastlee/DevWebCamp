@@ -12,8 +12,54 @@
 }
 
 .paquete{ 
-    .__elementos {
-        list-style: none;
+    background-color: lighten(v.$azul, 50);
+    transition-property: background-color;
+    transition-duration: .7s;
+    
+    &:hover {
+        background-color: lighten(v.$azul, 45);
+        transition-property: background-color;
+        transition-duration: .7s;
     }
+    @include m.card;
+    
+    &__lista {
+        @include m.reset-lista;
+        line-height: 2;
+    }
+
+    &__precio {
+        text-align: center;
+        font-size: 6rem;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none; 
+        user-select: none;
+        border-radius: 5px;
+        margin: 3rem 0 0 0;
+        transition-property: background-color;
+        transition-duration: .7s;
+        color: v.$azul;
+        font-weight: v.$bold;
+        text-align: center;
+        box-shadow: 0 0 5rem lighten( v.$azul, 45);
+             
+        &:hover {
+            background-color: lighten(v.$azul, 48);
+            cursor: pointer;
+            transition-property: background-color;
+            transition-duration: .3s;
+        }
+        &:active {
+            background-color: lighten(v.$verde, 8);
+            color: v.$blanco;
+            box-shadow: 0 0 20px rgba($color: #c2c2c2, $alpha: 2.0);
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+
 }
 

@@ -22,6 +22,12 @@
     }
 }
 
+@mixin telefono1 {
+    @media (max-width: v.$telefono1) {
+        @content;
+    }
+}
+
 @mixin boton($bgColor, $colorTexto) {
     background-color: $bgColor;
     padding: 1.5rem 4rem;
@@ -69,6 +75,7 @@
 
 @mixin contenido2 {
     width: min(100%, 100rem);
+    margin: 0 auto;
 }
 
 @mixin headings {
@@ -158,8 +165,6 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     font-weight: v.$bold;
-    
-   
 
     &:hover {
         color: v.$azul;
@@ -175,7 +180,6 @@
     margin: 0;
     padding: 0;
     list-style: none;
-
 }
 
 @mixin tags {
@@ -196,5 +200,16 @@
     :hover {
         background-color: lighten(v.$azul, 7);
     }
+}
 
+@mixin card {
+    border: 3px solid lighten(v.$gris, 53);
+    border-radius: 7px;
+    padding: 3rem;
+
+    &__nombre {
+        font-weight: v.$black;
+        font-size: 2.6rem;
+        margin: 2rem 0;
+    }
 }

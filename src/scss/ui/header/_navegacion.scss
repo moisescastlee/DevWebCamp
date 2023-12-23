@@ -4,6 +4,7 @@
 .navegacion {
     display: flex;
     flex-direction: column;
+    
     @include m.desktop {
         flex-direction: row;
     }
@@ -15,12 +16,18 @@
         font-weight: v.$black;
         text-transform: uppercase;
         text-align: center;
-
+        transition-property: background-color;
+        transition-duration: .8s;
+        box-shadow: 0 0 1px rgba($color: #0a6cff77, $alpha: 3.0);
+        border-radius: 2px;
 
         &:hover {
             color: v.$azul;
-            background-color: v.$blanco;
-            
+            background-color: lighten(v.$azul, 43);
+            transition-property: background-color;
+            transition-duration: .8s;
+            border-radius: 2px;
+            box-shadow: 0 0 10px rgba($color: #c2c2c2, $alpha: 0.5);
         }
     }
-}
+} 

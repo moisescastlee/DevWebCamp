@@ -1,5 +1,5 @@
 <main class="devwebcamp">
-    <h2 class="devwebcamp__heading"><?php echo $titulo ?></h2>
+    <h2 class="devwebcamp__heading"><?php echo $titulo ?></h2> 
     <p class="devwebcamp__descripcion">Conoces la conferencia mas importante de Latinoamerica</p>
 
     <div class="devwebcamp__grid">

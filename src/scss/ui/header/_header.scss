@@ -52,6 +52,7 @@
         margin: 2rem 0;
         text-align: center;
         text-transform: uppercase;
+        
         @include m.tablet {
             text-align: left;
         }
@@ -62,7 +63,6 @@
     }
 
     &__boton {
-
         @include m.boton(v.$secundario, v.$blanco);
         border-radius: 1px;
         @include m.boton(v.$azul, v.$blanco);
@@ -72,7 +72,5 @@
             width: auto;
         }
     }
-
-
 
 }

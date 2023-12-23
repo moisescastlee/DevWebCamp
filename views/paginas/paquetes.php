@@ -23,7 +23,7 @@
                 <li class="paquete__elemento">Comida y bebida</li>
             </ul>
 
-            <p href="" class="paquete__precio">$199</p>
+            <p href="" class="paquete__precio">$49</p>
         </div>
 
         <div class="paquete">
@@ -35,7 +35,7 @@
                 <li class="paquete__elemento">Acceso a las grabaciones</li>
             </ul>
 
-            <p href="" class="paquete__precio">$49</p>
+            <p href="" class="paquete__precio">$79</p>
         </div>
     </div>
 </main>

@@ -5,14 +5,16 @@
     background-color: v.$azul;
     box-shadow: 0 0 5px rgba($color: #0a6cff, $alpha: 2.0);
 
+    h2 {
+        margin-left: 2rem;
+    }
+
     &__contenido {
         @include m.contenedor;
         display: flex;
         flex-direction: column;
         width: min(100%, 140rem);
         
-        
-
         @include m.desktop {
             align-items: center;
             flex-direction: row;

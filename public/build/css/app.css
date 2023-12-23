@@ -424,6 +424,14 @@ h3 {
   font-size: 2.6rem;
   margin: 2rem 0;
 }
+.paquete:nth-child(2) {
+  order: -1;
+}
+@media (min-width: 768px) {
+  .paquete:nth-child(2) {
+    order: 0;
+  }
+}
 .paquete__lista {
   margin: 0;
   padding: 0;
@@ -740,6 +748,9 @@ h3 {
 .barra {
   background-color: #007df4;
   box-shadow: 0 0 5px #0a6cff;
+}
+.barra h2 {
+  margin-left: 2rem;
 }
 .barra__contenido {
   width: min(90%, 140rem);

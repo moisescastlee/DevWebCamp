@@ -470,6 +470,26 @@ h3 {
   transform: scale(1);
 }
 
+.agenda {
+  padding: 5rem 0;
+  width: min(90%, 140rem);
+  margin: 0 auto;
+}
+
+.eventos__heading {
+  color: #007df4;
+  margin: 5rem 0;
+  text-align: left;
+  font-size: clamp(2rem, -0.8rem + 8vw, 5rem);
+}
+.eventos__fecha {
+  color: #64748B;
+  margin: 3rem 0 1rem 0;
+}
+.eventos--workshops .eventos__heading {
+  color: #00c8c2;
+}
+
 .formulario {
   display: flex;
   flex-direction: column;
@@ -802,11 +822,11 @@ h3 {
 }
 .navegacion__enlace:hover {
   color: #007df4;
-  background-color: #d0e8ff;
+  background-color: #eaf5ff;
   transition-property: background-color;
   transition-duration: 0.8s;
-  border-radius: 2px;
-  box-shadow: 0 0 10px rgba(194, 194, 194, 0.5);
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(223, 223, 223, 0.5);
 }
 
 .footer {

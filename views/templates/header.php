@@ -22,14 +22,14 @@
 
 <div class="barra">
         <div class="barra__contenido">
-            <a  href="/">
+            <a  href="/login">
                 <h2 class="barra__logo">&#60;DevWebCam /></h2>
             </a>
 
             <nav class="navegacion">
                 <a href="/devwebcam" class="navegacion__enlace">Eventos</a>
                 <a href="/paquetes" class="navegacion__enlace">Paquetes</a>
-                <a href="/workshops-conferencias" class="navegacion__enlace">Works Shop / Conferencias</a>
+                <a href="/conferencias" class="navegacion__enlace">Works Shop / Conferencias</a>
                 <a href="/registro" class="navegacion__enlace">Comprar Pase</a>
             </nav>
         </div>

@@ -23,11 +23,11 @@
 
         &:hover {
             color: v.$azul;
-            background-color: lighten(v.$azul, 43);
+            background-color: lighten(v.$azul, 48);
             transition-property: background-color;
             transition-duration: .8s;
-            border-radius: 2px;
-            box-shadow: 0 0 10px rgba($color: #c2c2c2, $alpha: 0.5);
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba($color: #dfdfdf, $alpha: 0.5);
         }
     }
 } 

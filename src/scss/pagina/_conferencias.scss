@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.agenda {
+    padding: 5rem 0;
+    @include m.contenedor;
+
+}
+
+.eventos {
+    $modify: &;
+
+    &__heading {
+        color: v.$azul;
+        margin: 5rem 0;
+        text-align: left;
+        font-size: clamp(2rem, -0.8rem + 8vw, 5rem);
+    }
+
+    &__fecha {
+        color: v.$gris;
+        margin: 3rem 0 1rem 0;
+    }
+
+    &--workshops {
+        #{$modify}__heading {
+            color: v.$secundario;
+        }
+    }
+}

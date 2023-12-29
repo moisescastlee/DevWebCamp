@@ -490,6 +490,20 @@ h3 {
   color: #00c8c2;
 }
 
+.evento__hora {
+  font-weight: 700;
+}
+.evento__informacion {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #007df4;
+  color: #FFFFFF;
+  transition: 300ms background-color ease;
+}
+.evento__informacion:hover {
+  background-color: #0063c1;
+}
+
 .formulario {
   display: flex;
   flex-direction: column;

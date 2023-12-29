@@ -149,10 +149,19 @@ class ActiveRecord {
 
     //traer total de registros
     public static function where($columna, $valor) {
-        $query = "SELECT * FROM " . static::$tabla . " WHERE $columna = '$valor'";
+        $query = "SELECT * FROM " . static::$tabla . " WHERE {$columna} = '{$valor}'";
         $resultado = self::consultarSQL($query);
         return array_shift( $resultado ) ;
     }
+
+
+    // Retornar los registros por un orden
+    public static function ordenar($columna, $order) {
+        $query = "SELECT * FROM " . static::$tabla . " ORDER BY {$columna} {$order} ";
+        $resultado = self::consultarSQL($query);
+       return $resultado;
+    }
+
 
     //Traer un total de registro
     public static function total() {

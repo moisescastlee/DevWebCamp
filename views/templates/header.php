@@ -12,7 +12,7 @@
                     </h1>
                 </a>
 
-            <p class="header__texto">Diciembre 5-6 - 2 O 2 3</p>
+            <p class="header__texto">Diciembre 5-6 - 2 O 2 5</p>
             <p class="header__texto header__texto--modalidad">En linea - Presencial</p>
             
             <a href="/registro" class="header__boton">Comprar Pase</a>

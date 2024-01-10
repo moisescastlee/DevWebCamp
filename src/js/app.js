@@ -1,7 +1,7 @@
-let time = document.getElementById("current-time");
+import './horas.js' ;
+import './ponentes.js' ; 
+import './tags.js';
+import './slider.js';
 
 
-setInterval(() => {
-    let d = new Date();
-    time.innerHTML = d.toLocaleDateString()}, 1000)
 

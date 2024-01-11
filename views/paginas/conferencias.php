@@ -7,9 +7,10 @@
         <!-- HORA CON JAVASCRIPS  <p id="current-time" class="eventos__fecha"></p> -->
         <p class="eventos__fecha">Viernes 25 de diciembre 2023</p>
         
-        <div class="eventos__listado">
+        <div class="eventos__listado slider swiper">
+         <div class="swiper-wrapper">
           <?php foreach($eventos ['conferencias_v'] as $evento )   { ?>
-             <div class="evento">
+             <div class="evento swiper-slide ">
                 <p class="evento__hora"><?php echo $evento->hora->hora; ?></p>
                 
                 <div class="evento__informacion">
@@ -27,8 +28,9 @@
                         </p>
                     </div>
                 </div>
-            </div>
-          <?php  } ?>
+             </div>
+            <?php  } ?>
+          </div>
         </div>
         
         <!-- HORA CON JAVASCRIPS  <p id="current-time" class="eventos__fecha"></p> -->

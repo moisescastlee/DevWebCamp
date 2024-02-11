@@ -5,7 +5,7 @@
     <div class="eventos">
         <h3 class="eventos__heading">&lt;Conferencias /></h3>
         <!-- HORA CON JAVASCRIPS  <p id="current-time" class="eventos__fecha"></p> -->
-        <p class="eventos__fecha">Viernes 25 de diciembre 2023</p>
+        <p class="eventos__fecha">Viernes 26 de diciembre 2023</p>
         
         <div class="eventos__listado slider swiper">
          <div class="swiper-wrapper">
@@ -27,11 +27,15 @@
                             <?php echo $evento->ponente->nombre . " " . $evento->ponente->apellido; ?>
                         </p>
                     </div>
-                </div>
-             </div>
-            <?php  } ?>
+                 </div>
+              </div>
+           <?php  } ?>
           </div>
-        </div>
+
+          <div class="swiper-buttom-next"></div>
+          <div class="swiper-buttom-prev"></div>
+
+      </div>
         
         <!-- HORA CON JAVASCRIPS  <p id="current-time" class="eventos__fecha"></p> -->
         <p class="eventos__fecha">Sabado 26 de diciembre 2023</p>

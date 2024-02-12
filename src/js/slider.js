@@ -1,7 +1,9 @@
 import Swiper from 'swiper';
-import { Navigation } from swiper/modules
+import { Navigation, Pagination } from 'swiper/modules';
+// import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -10,10 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
             slidesPerView: 1,
             spaceBetween: 20,
             freemode: true,
+            
             navigation: {
-                nextEl: '.swiper-buttom-next',
-                prevEl: '.swiper-buttom-prev',
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
+            
             breakpoints: {
                 768: {
                     slidesPerView: 2
@@ -26,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+
         Swiper.use([Navigation])
         new Swiper('.slider', opciones)
     }

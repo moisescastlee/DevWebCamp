@@ -26,6 +26,11 @@
             color: v.$secundario;
         }
     }
+
+    .swiper-buttom-next,
+    .swiper-buttom-prev {
+        color: rgba(v.$blanco, .5);
+    }
 }
 
 .evento {
@@ -44,6 +49,10 @@
         }
     }
 
+    &__nombre{
+        font-size: 2.4rem;
+        margin: 0;
+    }
     &__introduccion {
         font-size: 1.6rem;
         display: -webkit-box;
@@ -72,4 +81,6 @@
         font-weight: v.$bold;
 
     }
+
+    
 }

@@ -489,9 +489,9 @@ h3 {
 .eventos--workshops .eventos__heading {
   color: #00c8c2;
 }
-.eventos .swiper-buttom-next,
-.eventos .swiper-buttom-prev {
-  color: rgba(255, 255, 255, 0.5);
+.eventos .swiper-button-next,
+.eventos .swiper-button-prev {
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .evento__hora {
@@ -503,6 +503,7 @@ h3 {
   background-color: #007df4;
   color: #FFFFFF;
   transition: 300ms background-color ease;
+  min-height: 230px;
 }
 .evento__informacion:hover {
   background-color: #0063c1;

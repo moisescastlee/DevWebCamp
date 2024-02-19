@@ -489,9 +489,15 @@ h3 {
 .eventos--workshops .eventos__heading {
   color: #00c8c2;
 }
+.eventos--workshops .evento__informacion {
+  background-color: #00c8c2;
+}
+.eventos--workshops .evento__informacion:hover {
+  background-color: #009591;
+}
 .eventos .swiper-button-next,
 .eventos .swiper-button-prev {
-  color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
 }
 
 .evento__hora {
@@ -811,7 +817,6 @@ h3 {
 
 .barra {
   background-color: #007df4;
-  box-shadow: 0 0 5px #0a6cff;
 }
 .barra h2 {
   margin-left: 2rem;
@@ -854,23 +859,15 @@ h3 {
 }
 .navegacion__enlace {
   color: #FFFFFF;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 2rem;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
-  transition-property: background-color;
-  transition-duration: 0.8s;
-  box-shadow: 0 0 1px #0a6cff;
-  border-radius: 2px;
 }
-.navegacion__enlace:hover {
+.navegacion__enlace--actual, .navegacion__enlace:hover {
+  background-color: #FFFFFF;
   color: #007df4;
-  background-color: #eaf5ff;
-  transition-property: background-color;
-  transition-duration: 0.8s;
-  border-radius: 1px;
-  box-shadow: 0 0 10px rgba(223, 223, 223, 0.5);
 }
 
 .footer {

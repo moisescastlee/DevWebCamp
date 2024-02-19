@@ -11,23 +11,16 @@
 
     &__enlace {
         color: v.$blanco;
-        font-size: 1.8rem;
+        font-size: 2rem;
         padding: 2rem;
         font-weight: v.$black;
         text-transform: uppercase;
         text-align: center;
-        transition-property: background-color;
-        transition-duration: .8s;
-        box-shadow: 0 0 1px rgba($color: #0a6cff77, $alpha: 3.0);
-        border-radius: 2px;
-
+        
+        &--actual,
         &:hover {
+            background-color: v.$blanco;
             color: v.$azul;
-            background-color: lighten(v.$azul, 48);
-            transition-property: background-color;
-            transition-duration: .8s;
-            border-radius: 1px;
-            box-shadow: 0 0 10px rgba($color: #dfdfdf, $alpha: 0.5);
         }
     }
 } 

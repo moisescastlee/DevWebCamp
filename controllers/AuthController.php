@@ -244,4 +244,11 @@ class AuthController {
             'alertas' => Usuario::getAlertas()
         ]);
     }
+
+    public static function index(Router $router) {
+
+        $router->render('/', [
+
+        ]);
+    }
 }

@@ -25,12 +25,17 @@
         #{$modify}__heading {
             color: v.$secundario;
         }
+        .evento__informacion {
+            background-color: v.$secundario;
+            &:hover {
+                background-color: darken(v.$secundario,10%);
+            }
+        }
     }
 
     .swiper-button-next,
     .swiper-button-prev {
-        color: rgba(v.$blanco, .2);
-        
+        color: v.$blanco;
     }
 }
 
@@ -83,5 +88,4 @@
 
     }
 
-    
 }

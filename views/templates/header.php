@@ -3,6 +3,10 @@
         <nav class="header__navegacion">
             
         <?php if(is_auth()) { ?>
+            <a href="<?php echo is_admin() ? '/admin/dashboard' : '/finalizar-registro'; ?>" class="header__enlace">Administrar</a>
+            <form method="POST" class="header__form" action="/logout">
+                <input type="submit" value="Cerrar Sesion" class="header__submit">
+            </form>
 
             <?php } else { ?>
              <a href="/registro" class="header__enlace"> Registro</a>
@@ -37,8 +41,8 @@
             <nav class="navegacion">
                 <a href="/devwebcam" class="navegacion__enlace <?php echo pagina_actual('devwebcam') ? 'navegacion__enlace--actual' : ''; ?>">Eventos</a>
                 <a href="/paquetes" class="navegacion__enlace <?php echo pagina_actual('paquetes') ? 'navegacion__enlace--actual' : ''; ?>">Paquetes</a>
-                <a href="/conferencias" class="navegacion__enlace <?php echo pagina_actual('conferencias') ? 'navegacion__enlace--actual' : ''; ?> ">Works Shop / Conferencias</a>
-                <a href="/registro" class="navegacion__enlace <?php echo pagina_actual('registro') ? 'navegacion__enlace--actual' : ''; ?> ">Comprar Pase</a>
+                <a href="/conferencias" class="navegacion__enlace <?php echo pagina_actual('conferencias') ? 'navegacion__enlace--actual' : ''; ?>">Works Shop / Conferencias</a>
+                <a href="/registro" class="navegacion__enlace <?php echo pagina_actual('registro') ? 'navegacion__enlace--actual' : ''; ?>">Comprar Pase</a>
             </nav>
         </div>
 </div>

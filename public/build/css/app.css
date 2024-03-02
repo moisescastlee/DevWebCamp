@@ -576,6 +576,104 @@ h3 {
   font-size: 8rem;
 }
 
+.speakers__grid {
+  width: min(90%, 140rem);
+  margin: 0 auto;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media (min-width: 768px) {
+  .speakers__grid {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .speakers__grid {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.speaker {
+  border: 3px solid white;
+  border-radius: 7px;
+  padding: 3rem;
+  border: 3px solid white;
+  border-radius: 7px;
+  transition-duration: 0.7s;
+}
+.speaker__nombre {
+  font-weight: 900;
+  font-size: 2.6rem;
+  margin: 2rem 0;
+}
+.speaker:hover {
+  background-color: #eff7ff;
+  transition-property: background-color;
+  transition-duration: 0.7s;
+}
+.speaker__listado-skills {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.speaker__listado-skills > li {
+  background-color: #007df4;
+  padding: 1rem;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.speaker__listado-skills :hover {
+  background-color: #198fff;
+}
+
+.speaker-sociales {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.speaker-sociales__enlace::before {
+  color: #1a1b15;
+  font-size: 3rem;
+  display: inline-block;
+  font-style: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 6 Brands";
+}
+.speaker-sociales__enlace[href*="facebook.com"]::before {
+  content: "\f39e";
+}
+.speaker-sociales__enlace[href*="github.com"]::before {
+  content: "\f09b";
+}
+.speaker-sociales__enlace[href*="tiktok.com"]::before {
+  content: "\e07b";
+}
+.speaker-sociales__enlace[href*="instagram.com"]::before {
+  content: "\f16d";
+}
+.speaker-sociales__enlace[href*="youtube.com"]::before {
+  content: "\f167";
+}
+.speaker-sociales__enlace[href*="twitter.com"]::before {
+  content: "\f099";
+}
+.speaker-sociales__ocultar {
+  display: none;
+}
+
 .formulario {
   display: flex;
   flex-direction: column;
@@ -974,22 +1072,22 @@ h3 {
   -webkit-font-smoothing: antialiased;
   font-family: "Font Awesome 6 Brands";
 }
-.menu-redes__enlace[href*="https://facebook.com"]::before {
+.menu-redes__enlace[href*="facebook.com"]::before {
   content: "\f39e";
 }
-.menu-redes__enlace[href*="https://github.com"]::before {
+.menu-redes__enlace[href*="github.com"]::before {
   content: "\f09b";
 }
-.menu-redes__enlace[href*="https://tiktok.com"]::before {
+.menu-redes__enlace[href*="tiktok.com"]::before {
   content: "\e07b";
 }
-.menu-redes__enlace[href*="https://instagram.com"]::before {
+.menu-redes__enlace[href*="instagram.com"]::before {
   content: "\f16d";
 }
-.menu-redes__enlace[href*="https://youtube.com"]::before {
+.menu-redes__enlace[href*="youtube.com"]::before {
   content: "\f167";
 }
-.menu-redes__enlace[href*="https://twitter.com"]::before {
+.menu-redes__enlace[href*="twitter.com"]::before {
   content: "\f099";
 }
 .menu-redes__ocultar {

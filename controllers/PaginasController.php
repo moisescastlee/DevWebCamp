@@ -41,10 +41,8 @@ class PaginasController {
         $ponentes_total = Ponente::total();
         $conferencias_total = Evento::total('categoria_id', 1);
         $workshops_total = Evento::total('categoria_id', 2);
-        $asistentes = Ponente::total('nombre', 3);
 
         $ponentes = Ponente::all();
-        
 
 
         $router->render('paginas/index', [

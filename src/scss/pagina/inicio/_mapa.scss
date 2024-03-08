@@ -1,0 +1,18 @@
+.mapa {
+    height: 45rem;
+    margin-top: 5rem;
+
+    &__heading {
+        margin: 0;
+        text-align: left;
+        color: aqua;
+    }
+
+    &__texto {
+        font-size: 1.8rem;
+        font-weight: 800;
+        text-align: center;
+        margin: 0;
+        color: rgb(255, 140, 0);
+    }
+}

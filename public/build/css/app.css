@@ -695,6 +695,23 @@ h3 {
   display: none;
 }
 
+.mapa {
+  height: 45rem;
+  margin-top: 5rem;
+}
+.mapa__heading {
+  margin: 0;
+  text-align: left;
+  color: aqua;
+}
+.mapa__texto {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 0;
+  color: rgb(255, 140, 0);
+}
+
 .formulario {
   display: flex;
   flex-direction: column;

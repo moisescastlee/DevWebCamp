@@ -106,3 +106,18 @@
     <?php } ?>
    </div>
 </section>
+
+<div id="mapa" class="mapa"></div>
+
+<section class="boletos">
+         <h2 class="boletos__heading">boletos & precios</h2>
+         <p class="boletos__descripcion">Precios para DevWebCamp</p>
+
+         <div class="boletos__grid">
+            <div class="boleto">
+                  <h4 class="boleto__logo">&#60;DevWebCam /></h4>
+                  <p class="boleto__plan">Presencial</p>
+                  <p class="boleto__precio">$70</p>
+            </div>
+         </div>
+</section>

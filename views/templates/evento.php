@@ -1,6 +1,6 @@
 <div class="evento swiper-slide">
     <p class="evento__hora"><?php echo $evento->hora->hora; ?></p>  
-        <div class="evento__informacion">
+        <div <?php aosfunction()?> class="evento__informacion">
               <h4 class="evento__nombre"><?php echo $evento->nombre; ?></h4>                        
               <p class="evento__introduccion"><?php echo $evento->descripcion; ?></p>
                     

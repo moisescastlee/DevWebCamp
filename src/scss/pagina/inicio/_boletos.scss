@@ -1,0 +1,91 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.boletos {
+    &__grid {
+        @include m.contenedor-sm;
+        @include m.grid(1,5rem);
+    }
+}
+
+.boleto {
+    width: min(100% - 5rem, 65rem);
+    margin: 0 auto;
+    padding: 6rem;
+    border-radius: 1rem;
+    color: v.$blanco;
+    position: relative;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        background-color: v.$blanco;
+        width: 5rem;
+        height: 5rem;
+        top: calc(50% - 2.5rem);
+    }
+
+    &::before {
+        clip-path: circle(50% at 25% 50%);
+        left: 0;
+    }
+
+    &::after {
+        clip-path: circle(50% at 75% 50%);
+        right: 0;
+    }
+
+    &--presencial {
+        background-color:hsla(224,92%,36%,1);
+        background-image:
+        radial-gradient(at 12% 50%, hsla(246,92%,78%,1) 0px, transparent 50%),
+        radial-gradient(at 31% 30%, hsla(8,19%,73%,1) 0px, transparent 50%),
+        radial-gradient(at 80% 96%, hsla(229,61%,78%,1) 0px, transparent 50%),
+        radial-gradient(at 68% 48%, hsla(356,94%,76%,1) 0px, transparent 50%),
+        radial-gradient(at 2% 3%, hsla(41,92%,75%,1) 0px, transparent 50%),
+        radial-gradient(at 38% 74%, hsla(125,90%,66%,1) 0px, transparent 50%),
+        radial-gradient(at 91% 8%, hsla(241,90%,51%,1) 0px, transparent 50%);
+        
+    }
+
+    &--virtual {
+        background-color: v.$azul;
+    }
+
+    &--gratis {
+        background-color: v.$secundario;
+    }
+
+    &__logo {
+        @include m.logo;
+        @include m.texto-fluido(2rem, 4rem);
+
+    }
+
+    &__plan {
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 3rem 0 0 0;
+    }
+
+    &__precio {
+        margin: 3rem 0 0 0;
+        font-weight: v.$black;
+        font-size: 4rem;
+    }
+
+    &__enlace-contenedor {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+
+    &__enlace {
+        @include m.boton(v.$azul, v.$blanco);
+        border-radius: 5px;
+        width: auto;
+    }
+}

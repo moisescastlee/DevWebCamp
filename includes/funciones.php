@@ -28,3 +28,9 @@ function is_admin() : bool {
     }
     return isset($_SESSION['admin']) && !empty($_SESSION['admin']);
 }
+
+function aosfunction() : void {
+    $efectos = ['fade-up', 'fade-down', 'fade-right', 'fade-left', 'fade-up-right', 'fade-up-left', 'fade-up-down', 'fade-up-up'];
+    $efecto = array_rand($efectos, 1);
+    echo ' data-aos="' . $efectos[$efecto] . '" ';
+}  

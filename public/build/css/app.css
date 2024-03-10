@@ -712,6 +712,95 @@ h3 {
   color: rgb(255, 140, 0);
 }
 
+.boletos__grid {
+  width: min(95%, 60rem);
+  margin: 0 auto;
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.boleto {
+  width: min(100% - 5rem, 65rem);
+  margin: 0 auto;
+  padding: 6rem;
+  border-radius: 1rem;
+  color: #FFFFFF;
+  position: relative;
+}
+.boleto::before, .boleto::after {
+  position: absolute;
+  content: "";
+  background-color: #FFFFFF;
+  width: 5rem;
+  height: 5rem;
+  top: calc(50% - 2.5rem);
+}
+.boleto::before {
+  clip-path: circle(50% at 25% 50%);
+  left: 0;
+}
+.boleto::after {
+  clip-path: circle(50% at 75% 50%);
+  right: 0;
+}
+.boleto--presencial {
+  background-color: hsl(224, 92%, 36%);
+  background-image: radial-gradient(at 12% 50%, hsl(246, 92%, 78%) 0px, transparent 50%), radial-gradient(at 31% 30%, hsl(8, 19%, 73%) 0px, transparent 50%), radial-gradient(at 80% 96%, hsl(229, 61%, 78%) 0px, transparent 50%), radial-gradient(at 68% 48%, hsl(356, 94%, 76%) 0px, transparent 50%), radial-gradient(at 2% 3%, hsl(41, 92%, 75%) 0px, transparent 50%), radial-gradient(at 38% 74%, hsl(125, 90%, 66%) 0px, transparent 50%), radial-gradient(at 91% 8%, hsl(241, 90%, 51%) 0px, transparent 50%);
+}
+.boleto--virtual {
+  background-color: #007df4;
+}
+.boleto--gratis {
+  background-color: #00c8c2;
+}
+.boleto__logo {
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, -0.8rem + 10vw, 4rem);
+}
+@media (min-width: 1024px) {
+  .boleto__logo {
+    text-align: left;
+    margin: 0;
+  }
+}
+.boleto__plan {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 3rem 0 0 0;
+}
+.boleto__precio {
+  margin: 3rem 0 0 0;
+  font-weight: 900;
+  font-size: 4rem;
+}
+.boleto__enlace-contenedor {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.boleto__enlace {
+  background-color: #007df4;
+  padding: 1.5rem 4rem;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  border-radius: 5px;
+  width: auto;
+}
+.boleto__enlace:hover {
+  background-color: #0063c1;
+  cursor: pointer;
+}
+
 .formulario {
   display: flex;
   flex-direction: column;

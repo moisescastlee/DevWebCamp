@@ -13,7 +13,7 @@ if(document.querySelector('#mapa')) {
     L.marker([lat, lng]).addTo(map)
     .bindPopup(`
         <h2 class="mapa__heading">DevWebCamp</h2>
-        <p class="mapa__texto">Centro Los Bebes</p>
+        <p class="mapa__texto">Centro Bebes</p>
     `)
     .openPopup();
 }

@@ -2,17 +2,19 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
-use Classes\Paginacion;
 use MVC\Router;
+use Classes\Paginacion;
 use Controllers\APIEventos;
 use Controllers\APIPonentes;
 use Controllers\AuthController;
 use Controllers\EventosController;
+use Controllers\PaginasController;
 use Controllers\RegalosController;
 use Controllers\PonentesController;
+use Controllers\RegistroController;
 use Controllers\DashboardController;
 use Controllers\RegistradosController;
-use Controllers\PaginasController;
+
 
 
 $router = new Router();
@@ -71,11 +73,18 @@ $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 //Regalos
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
 
+//Registro de ususarios
+$router->get('finalizar-registro', [RegistroController::class, 'crear']);
+
+
 //Areas Publicas
 $router->get('/', [PaginasController::class, 'index']);
 $router->get('/devwebcam', [PaginasController::class, 'evento']);
 $router->get('/paquetes', [PaginasController::class, 'paquetes']);
 $router->get('/conferencias', [PaginasController::class, 'conferencia']);
+$router->get('/404', [PaginasController::class, 'error']);
+
+
 
 
 $router->comprobarRutas();

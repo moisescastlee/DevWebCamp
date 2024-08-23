@@ -11,7 +11,7 @@ use Controllers\EventosController;
 use Controllers\PaginasController;
 use Controllers\RegalosController;
 use Controllers\PonentesController;
-use Controllers\RegistroController;
+use Controllers\RegistrosController;
 use Controllers\DashboardController;
 use Controllers\RegistradosController;
 
@@ -60,12 +60,10 @@ $router->get('/admin/eventos/editar', [EventosController::class, 'editar']);
 $router->post('/admin/eventos/editar', [EventosController::class, 'editar']);
 $router->post('/admin/eventos/eliminar', [EventosController::class, 'eliminar']);
 
-
 //API
 $router->get('/api/eventos-horario', [APIEventos::class, 'index']);
 $router->get('/api/ponentes', [APIPonentes::class, 'index']);
 $router->get('/api/ponente', [APIPonentes::class, 'ponente']);
-
 
 //Registrados
 $router->get('/admin/registrados', [RegistradosController::class, 'index']);
@@ -74,8 +72,8 @@ $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
 
 //Registro de ususarios
-$router->get('finalizar-registro', [RegistroController::class, 'crear']);
-
+$router->get('/finalizar-registro', [RegistrosController::class, 'crear']);
+$router->get('/finalizar-registro/gratis', [RegistrosController::class, 'gratis']);
 
 //Areas Publicas
 $router->get('/', [PaginasController::class, 'index']);
@@ -84,11 +82,12 @@ $router->get('/paquetes', [PaginasController::class, 'paquetes']);
 $router->get('/conferencias', [PaginasController::class, 'conferencia']);
 $router->get('/404', [PaginasController::class, 'error']);
 
+//prueba
+
 
 
 
 $router->comprobarRutas();
-
 //AREA de ADMINISTRACION
 
 

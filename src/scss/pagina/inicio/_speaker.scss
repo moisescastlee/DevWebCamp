@@ -16,10 +16,10 @@
 }
 
 .speaker {
-    @include m.card;
+    @include m.card();
     background-position: center top;
     background-size: 350px;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     
     @for $i from 1 through 4 {
         &:nth-child(4n + #{$i}) {

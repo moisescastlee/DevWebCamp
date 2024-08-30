@@ -85,7 +85,7 @@
 
     &__enlace {
         @include m.boton(v.$azul, v.$blanco);
-        border-radius: 5px;
-        width: auto;
+        & {border-radius: 5px;
+        width: auto;}
     }
 }

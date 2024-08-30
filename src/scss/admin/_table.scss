@@ -1,5 +1,5 @@
 @use 'base/mixins' as m;
-@use 'base/variables' as v;
+@use 'base/variables' as *;
 
 .table  {
     width: 100%;
@@ -7,8 +7,8 @@
 
 
     &__thead {
-        background-color: v.$gris-oscuro;
-        color: v.$blanco;
+        background-color: $gris;
+        color: blanco;
     }
 
     &__th {
@@ -19,7 +19,7 @@
 
     &__tr {
         &:nth-of-type(even) {
-            background-color: v.$gris-claro;
+            background-color: $gris-oscuro;
         }
     }
 
@@ -36,7 +36,7 @@
         }
 
         .a {
-            color: rgb(0, 0, 0);
+            color: $negro;
         }
     }
 
@@ -45,13 +45,13 @@
         all: unset;
         text-transform: uppercase;
         font-size: 1.4rem;
-        font-weight: v.$bold;
+        font-weight: $bold;
         
         &--editar {
-            color: v.$verde;
+            color: $verde;
         }
         &--eliminar {
-            color: v.$rojo;
+            color: $rojo;
         }
         &:hover{
             cursor: pointer;

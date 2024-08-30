@@ -2,33 +2,34 @@
 
 /** Media Queries **/
 @mixin telefono {
-    @media (min-width: v.$telefono) {
+  & { @media (min-width: v.$telefono) {
         @content;
-    }
+    }}
 }
 @mixin tablet {
-    @media (min-width: v.$tablet) {
+   &{ @media (min-width: v.$tablet) {
         @content;
-    }
+    }}
 }
 @mixin desktop {
-    @media (min-width: v.$desktop) {
+      @media (min-width: v.$desktop) {
         @content;
     }
 }
 @mixin xl_desktop {
-    @media (min-width: v.$xl_desktop) {
+   @media (min-width: v.$xl_desktop) {
         @content;
     }
 }
 
 @mixin telefono1 {
-    @media (max-width: v.$telefono1) {
+ & {  @media (max-width: v.$telefono1) {
         @content;
-    }
+    }}
 }
 
 @mixin boton($bgColor, $colorTexto) {
+ &  {
     background-color: $bgColor;
     padding: 1.5rem 4rem;
     color: $colorTexto;
@@ -40,6 +41,7 @@
     text-align: center;
     width: 100%;
     display: inline-block;
+    }
 
     &:hover {
         background-color: darken( $bgColor, 10% );
@@ -47,85 +49,89 @@
     }
 }
 
-@mixin grid($columnas, $espaciado ) {
-    display: grid;
+@mixin grid($columnas, $espaciado) {
+     & {display: grid;
     gap: $espaciado;
-    grid-template-columns: repeat($columnas, 1fr);
+    grid-template-columns: repeat($columnas, 1fr); }
 }
 
 @mixin contenedor {
-    width: min(90%, 140rem);
+    width:min(90%, 140rem);
     margin: 0 auto;
 }
 
 @mixin contenido {
-    width: min(95%, 100rem);
-    margin: 0 auto;
+   & { width: min(95%, 100rem);
+    margin: 0 auto;}
 }
 
 @mixin contenedor-md {
-    width: min(95%, 60rem);
-    margin: 0 auto;
+  & { width: min(95%, 60rem);
+    margin: 0 auto;}
 }
 
 @mixin contenedor-sm {
-    width: min(95%, 60rem);
-    margin: 0 auto;
+  & { width: min(95%, 60rem);
+    margin: 0 auto;}
 }
 
 @mixin contenido1 {
-    width: min(95%, 80rem);
-    margin: 0 auto;
+   & { width: min(95%, 80rem);
+    margin: 0 auto;}
 }
 
 @mixin contenido2 {
-    width: min(100%, 100rem);
-    margin: 0 auto;
+   & { width: min(100%, 100rem);
+    margin: 0 auto;}
 }
 
 @mixin headings {
-    font-family: v.$fuente_principal;
+   & { font-family: v.$fuente_principal;
     font-weight: v.$black;
     margin: 2rem 0;
+    }
 }   
 
 @mixin nombre-pagina {
-    @include headings;
-    margin: 6rem 0 3rem 0;
-    text-align: center;
+ & {  @include headings;
+   & {margin: 6rem 0 3rem 0;
+    text-align: center;}
+    }
 }
 
 @mixin descripcion-pagina {
-    text-align: center;
+   & {text-align: center;
     font-size: 1.8rem;
     font-weight: v.$delgada;
     color: v.$gris-oscuro;
-    margin-bottom: 5rem;
+    margin-bottom: 5rem;}
 }
 
 @mixin texto-fluido ($min,   $max ) {
-    font-size: clamp($min, -0.8rem + 10vw, $max);
+    &{ font-size: clamp($min, -0.8rem + 10vw, $max);}
 }
 
 @mixin texto-degradado($inicio, $final) {
+  & { 
     background: linear-gradient(to right, $inicio, $final);
     -webkit-background-clip: text;
     color: transparent;
+    }
 }
 
 @mixin logo {
-    color: v.$blanco;
+    & {color: v.$blanco;
     text-align: center;
     margin-bottom: 1rem;
     @include desktop {
         text-align: left;
         margin: 0;
-    }
+    }}
 }
 
 @mixin menu-social($color, $size) {
 
-    &__enlace {
+   &__enlace {
         
         &::before {
             color: $color;
@@ -165,7 +171,7 @@
 }
 
 @mixin enlace {
-    all: unset;
+   & { all: unset;
     color: v.$blanco;
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -174,11 +180,12 @@
     &:hover {
         color: v.$azul;
         cursor: pointer;
-    }
+    }}
 }
 
 @mixin shadow {
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+
 }
 
 @mixin reset-lista{
@@ -188,8 +195,8 @@
 }
 
 @mixin tags {
-    @include reset-lista;
-    display: flex;
+   @include reset-lista;
+    &{display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     margin-top: 1.5rem;
@@ -204,17 +211,17 @@
     }
     :hover {
         background-color: lighten(v.$azul, 7);
-    }
+    }}
 }
 
 @mixin card {
-    border: 3px solid lighten(v.$gris, 53);
+    & {border: 3px solid lighten(v.$gris, 53);
     border-radius: 7px;
-    padding: 3rem;
+    padding: 3rem;}
 
     &__nombre {
         font-weight: v.$black;
         font-size: 2.6rem;
         margin: 2rem 0;
     }
-}
+  }

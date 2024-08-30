@@ -46,10 +46,10 @@
     &__logo{
         @include m.texto-fluido(2rem, 6rem);
         @include m.texto-degradado(v.$azul, v.$secundario );
-        text-align: center;
+      & { text-align: center;}
         @include m.tablet {
-            text-align: left;
-            display: inline-block;
+           & {text-align: left;
+            display: inline-block;}
         }
     } 
 
@@ -62,7 +62,7 @@
         text-transform: uppercase;
         
         @include m.tablet {
-            text-align: left;
+            &{text-align: left;}
         }
 
         &--modalidad {
@@ -72,12 +72,12 @@
 
     &__boton {
         @include m.boton(v.$secundario, v.$blanco);
-        border-radius: 1px;
+      & { border-radius: 1px;}
         @include m.boton(v.$azul, v.$blanco);
-        text-transform: uppercase;
-        margin: 2rem 0;
+      & { text-transform: uppercase;
+        margin: 2rem 0;}
         @include m.tablet{
-            width: auto;
+          &  {width: auto;}
         }
     }
 

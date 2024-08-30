@@ -7,7 +7,7 @@
         @include m.grid(1, 5rem);
         @include m.tablet {
             @include m.grid(2, 5rem);
-            align-items: center;
+            & {align-items: center;}
         }
         @include m.xl_desktop {
             @include m.grid(3, 5rem);
@@ -17,9 +17,9 @@
 
 .speaker {
     @include m.card();
-    background-position: center top;
+  & {  background-position: center top;
     background-size: 350px;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat; }
     
     @for $i from 1 through 4 {
         &:nth-child(4n + #{$i}) {
@@ -54,8 +54,8 @@
 
 .speaker-sociales {
     @include m.menu-social(v.$negro, 3rem);
-    display: flex;
+  & { display: flex;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 2rem;}
 
 }

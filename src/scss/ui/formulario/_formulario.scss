@@ -90,8 +90,8 @@
 
     &__submit{
         @include m.boton(v.$azul, v.$blanco);
-        border-radius: .3rem;
-        align-self: flex-start;
+       & {border-radius: .3rem;
+        align-self: flex-start;}
       
         &--registrar {
             width: 100;

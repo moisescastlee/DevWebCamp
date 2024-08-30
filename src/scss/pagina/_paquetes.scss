@@ -9,6 +9,10 @@
             @include m.grid(3, 3rem);
         }
     }
+
+    &__submit {
+        @include m.boton(v.$verde, v.$blanco);
+    }
 }
 
 .paquete{ 
@@ -32,7 +36,7 @@
     
     &__lista {
         @include m.reset-lista;
-        line-height: 2;
+     & {  line-height: 2;}
     }
 
     &__precio {

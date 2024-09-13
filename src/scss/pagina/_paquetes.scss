@@ -12,6 +12,13 @@
 
     &__submit {
         @include m.boton(v.$verde, v.$blanco);
+        & { width: v.$ochenta;
+            text-align: center;
+            margin-left: 3.5rem;
+            margin-top: 5rem;
+            border-radius: 4px;
+         }
+        
     }
 }
 
@@ -40,7 +47,7 @@
     }
 
     &__precio {
-        text-align: center;
+        
         font-size: 6rem;
         -webkit-touch-callout: none;
         -webkit-user-select: none;

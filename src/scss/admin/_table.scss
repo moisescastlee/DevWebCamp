@@ -4,11 +4,11 @@
 .table  {
     width: 100%;
     border-collapse: collapse;
-
+    
 
     &__thead {
         background-color: $gris;
-        color: blanco;
+        color: $blanco;
     }
 
     &__th {
@@ -18,8 +18,10 @@
     }
 
     &__tr {
+        
         &:nth-of-type(even) {
-            background-color: $gris-oscuro;
+            background-color: lighten($gris-oscuro, 70);
+           
         }
     }
 

@@ -431,6 +431,13 @@ h3 {
   background-color: #02a802;
   cursor: pointer;
 }
+.paquetes__submit {
+  width: 80%;
+  text-align: center;
+  margin-left: 3.5rem;
+  margin-top: 5rem;
+  border-radius: 4px;
+}
 
 .paquete {
   background-color: #f4faff;
@@ -469,7 +476,6 @@ h3 {
   line-height: 2;
 }
 .paquete__precio {
-  text-align: center;
   font-size: 6rem;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -1470,14 +1476,14 @@ h3 {
 }
 .table__thead {
   background-color: #64748B;
-  color: blanco;
+  color: #FFFFFF;
 }
 .table__th {
   padding: 1rem;
   text-align: left;
 }
 .table__tr:nth-of-type(even) {
-  background-color: #1E293B;
+  background-color: #d5dce9;
 }
 .table__td, .table__td--acciones {
   padding: 1.5rem 1rem;

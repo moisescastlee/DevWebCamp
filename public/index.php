@@ -11,7 +11,7 @@ use Controllers\EventosController;
 use Controllers\PaginasController;
 use Controllers\RegalosController;
 use Controllers\PonentesController;
-use Controllers\RegistrosController;
+use Controllers\RegistroController;
 use Controllers\DashboardController;
 use Controllers\RegistradosController;
 
@@ -72,8 +72,14 @@ $router->get('/admin/registrados', [RegistradosController::class, 'index']);
 $router->get('/admin/regalos', [RegalosController::class, 'index']);
 
 //Registro de ususarios
-$router->get('/finalizar-registro', [RegistrosController::class, 'crear']);
-$router->get('/finalizar-registro/gratis', [RegistrosController::class, 'gratis']);
+$router->get('/finalizar-registro', [RegistroController::class, 'crear']);
+$router->post('/finalizar-registro/gratis', [RegistroController::class, 'gratis']);
+$router->post('/finalizar-registro/pagar', [RegistroController::class, 'pagar']);
+$router->get('/finalizar-registro/conferencias', [RegistroController::class, 'conferencias']);
+
+
+$router->get('/boleto', [RegistroController::class, 'boleto']);
+
 
 //Areas Publicas
 $router->get('/', [PaginasController::class, 'index']);
@@ -83,7 +89,6 @@ $router->get('/conferencias', [PaginasController::class, 'conferencia']);
 $router->get('/404', [PaginasController::class, 'error']);
 
 //prueba
-
 
 
 

@@ -6,7 +6,7 @@
     flex-direction: column;
     
     @include m.desktop {
-        flex-direction: row;
+      & {flex-direction: row;}
     }
 
     &__enlace {
@@ -18,9 +18,10 @@
         text-align: center;
         
         &--actual,
-        &:hover {
+        :hover {
             background-color: v.$blanco;
             color: v.$azul;
         }
     }
+   
 } 

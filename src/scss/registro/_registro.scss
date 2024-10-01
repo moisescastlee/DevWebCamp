@@ -2,10 +2,11 @@
 @use 'base/variables' as v;
 
 .eventos-registro {
-     
     @include m.contenedor;
+    
     @include m.tablet {
         display: flex;
+        align-items: flex-start;
         gap: 2rem;
       }
 
@@ -24,17 +25,39 @@
     }
 
     &__heading {
-        &--conferencias {
-            color: v.$verde;
+        &--conferencias,
+        &--workshops {
             white-space: nowrap;
             @include m.texto-fluido( 2rem, 5rem);
+        }
+
+        &--conferencias {
+            color: v.$azul;
+            white-space: nowrap;
+        }
+
+        &--workshops {
+            color: v.$verde;
+            white-space: nowrap;
+            margin-top: 5rem;
         }
     }
 }
 
 .registro {
+    background-color: v.$gris-claro;
+    border-radius: 3rem;
+    padding: 3rem;
+   
     @include m.tablet; & {
         flex: 0 0 40%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 3rem;
+    }
+
+    &__heading {
+        margin: 0 0 3rem 0;
     }
 
 }

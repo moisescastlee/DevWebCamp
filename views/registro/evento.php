@@ -16,10 +16,13 @@
               </div>
 
               <button
-                type="button boton"
+                type="button"
                 data-id="<?php echo $evento->id; ?>"
-                
-              >Agregar</button>
-              
+                class="evento__agregar"
+                <?php echo ($evento->disponibles === "0") ? 'disabled' : ''; ?>
+              >
+                <?php echo ($evento->disponibles === "0") ? 'Agotado' : 'Agregar - ' . $evento->disponibles . ' Disponibles' ?>
+             
+            </button>
         </div>
    </div>

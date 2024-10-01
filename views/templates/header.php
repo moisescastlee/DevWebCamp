@@ -39,10 +39,10 @@
             </a>
 
             <nav class="navegacion">
-                <a href="/devwebcam" class="navegacion__enlace <?php echo pagina_actual('devwebcam') ? 'navegacion__enlace--actual' : ''; ?>">Eventos</a>
-                <a href="/paquetes" class="navegacion__enlace <?php echo pagina_actual('paquetes') ? 'navegacion__enlace--actual' : ''; ?>">Paquetes</a>
-                <a href="/conferencias" class="navegacion__enlace <?php echo pagina_actual('conferencias') ? 'navegacion__enlace--actual' : ''; ?>">Works Shop / Conferencias</a>
-                <a href="/registro" class="navegacion__enlace <?php echo pagina_actual('registro') ? 'navegacion__enlace--actual' : ''; ?>">Comprar Pase</a>
+                <a href="/devwebcam" class="navegacion__enlace <?php echo pagina_actual('/devwebcam') ? 'navegacion__enlace--actual' : ''; ?>">Eventos</a>
+                <a href="/paquetes" class="navegacion__enlace <?php echo pagina_actual('/paquetes') ? 'navegacion__enlace--actual' : ''; ?>">Paquetes</a>
+                <a href="/conferencias" class="navegacion__enlace <?php echo pagina_actual('/conferencias') ? 'navegacion__enlace--actual' : ''; ?>">Works Shop / Conferencias</a>
+                <a href="/registro" class="navegacion__enlace <?php echo pagina_actual('/registro') ? 'navegacion__enlace--actual' : ''; ?>">Comprar Pase</a>
             </nav>
         </div>
 </div>

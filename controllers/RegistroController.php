@@ -111,7 +111,7 @@ class RegistroController {
              $datos['token'] = substr( md5(uniqid( rand(), true )), 0, 8);
              $datos['usuario_id'] = $_SESSION['id'];
              
-             
+
              try {
              $registro = new Registro($datos); 
              $resultado = $registro->guardar();
@@ -130,7 +130,6 @@ class RegistroController {
         if(!is_auth()) {
             header('Location: /login');
         }
-
 
         //validar que el usuario tenga el plan presencial
         $usuario_id = $_SESSION['id'];

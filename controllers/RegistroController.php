@@ -6,6 +6,7 @@ use Model\Dia;
 use Model\Hora;
 use MVC\Router;
 use Model\Evento;
+use Model\Regalo;
 use Model\Paquete;
 use Model\Ponente;
 use Model\Usuario;
@@ -123,7 +124,6 @@ class RegistroController {
              }
          }
     }
-
  
     public static function conferencias(Router $router) {
 
@@ -165,14 +165,14 @@ class RegistroController {
             }
         }
 
-
+        $regalos = Regalo::all('ASC');
 
         $router->render('registro/conferencias', [
             'titulo' => 'Elige Workshops y Conferencias',
-            'eventos' => $eventos_formateados
+            'eventos' => $eventos_formateados,
+            'regalos' => $regalos
 
         ]);
     }
-
 
 }

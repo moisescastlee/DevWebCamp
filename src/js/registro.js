@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 (function() {
     let eventos = [];
 
@@ -7,13 +9,23 @@
 
     function seleccionarEvento({target}) {
         //deshabilitar el evento
-        target.disabled = true
-        eventos = [...eventos, {
-            id: target.dataset.id,
-            titulo: target.parentElement.querySelector('.evento__nombre').textContent.trim()
-        }]
+        if(eventos.length < 5) {
 
-        mostrarEventos();
+            target.disabled = true
+            eventos = [...eventos, {
+                id: target.dataset.id,
+                titulo: target.parentElement.querySelector('.evento__nombre').textContent.trim()
+            }]
+    
+            mostrarEventos();
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Lo siento...",
+                text: "No puedes agregar mas eventos!"
+              });
+        }
+
     }
 
     function mostrarEventos() {
@@ -28,11 +40,27 @@
                 titulo.classList.add('registro__nombre')
                 titulo.textContent = evento.titulo
 
+                const botonEliminar = document.createElement('BUTTON')
+                botonEliminar.classList.add('registro__eliminar')
+                botonEliminar.innerHTML = `<i class="fa-solid fa-trash"></i>`
+                botonEliminar.onclick = function() {
+                    eliminarEvento(evento.id)
+                }
+
+                //renderizar en el html
                 eventoDOM.appendChild(titulo)
+                eventoDOM.appendChild(botonEliminar)
                 resumen.appendChild(eventoDOM)
 
         }) 
       }
+    }
+
+    function eliminarEvento(id){
+        eventos = eventos.filter ( evento => evento.id !== id)
+        const botonAgregar = document.querySelector(`[data-id="${id}"]`)
+        botonAgregar.disabled = false
+        mostrarEventos();
     }
 
     function limpiarEventos() {

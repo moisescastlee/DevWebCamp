@@ -85,6 +85,17 @@
          }
     }
 
+    &__texto {
+        color: v.$blanco;
+        text-align: center;
+        background-color: darken(v.$rojo, 2);
+        padding: 1rem;
+        border-radius: 5px;
+        &:hover {
+            background-color: lighten(v.$rojo, 5);
+        }
+    }
+
     &__regalo {
         margin-top: 3rem;
     }
@@ -102,7 +113,7 @@
         border: 1px solid v.$gris;
         padding: 1rem;
         border-radius: .5rem;
-
+        
     }
 
 

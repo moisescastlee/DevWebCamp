@@ -4,8 +4,16 @@ import Swal from "sweetalert2";
     let eventos = [];
 
     const resumen = document.querySelector('#registro-resumen')
+
+    if(resumen) {
+
     const eventosBoton = document.querySelectorAll('.evento__agregar');
     eventosBoton.forEach(boton => boton.addEventListener('click', seleccionarEvento))
+
+    const formularioRegistro = document.querySelector('#registro');
+    formularioRegistro.addEventListener('submit', submitFormulario)
+
+    mostrarEventos();
 
     function seleccionarEvento({target}) {
         //deshabilitar el evento
@@ -51,10 +59,14 @@ import Swal from "sweetalert2";
                 eventoDOM.appendChild(titulo)
                 eventoDOM.appendChild(botonEliminar)
                 resumen.appendChild(eventoDOM)
-
-        }) 
-      }
-    }
+            }) 
+         } else {
+            const noRegistro = document.createElement('P')
+            noRegistro.textContent = 'No hay eventos, añade hasta 5 del lado izquierdo'
+            noRegistro.classList.add('registro__texto')
+            resumen.appendChild(noRegistro)
+         }
+     }
 
     function eliminarEvento(id){
         eventos = eventos.filter ( evento => evento.id !== id)
@@ -68,5 +80,36 @@ import Swal from "sweetalert2";
             resumen.removeChild(resumen.firstChild);
         }
     }
+
+    async function submitFormulario(e) {
+        e.preventDefault();
+
+        const regaloId = document.querySelector('#regalo').value
+        const eventosId = eventos.map(evento => evento.id)
+
+        if(eventosId.length === 0 || regaloId === '') {
+            Swal.fire({
+                icon: "error",
+                title: "Lo siento...",
+                text: "Debes de elegir el regalo o el evento!"
+              })
+              return;
+        }
+
+        //Objeto de formdata
+        const datos = new FormData();
+        datos.append('eventos', eventosId)
+        datos.append('regalo_Id', regaloId)
+
+        const url = '/finalizar-registro/conferencias';
+        const respuesta = await fetch(url, {
+            method: 'POST',
+            body: datos
+        })
+        const resultado = await respuesta.json();
+
+        console.log(resultado)
+    }
+ }
 
 })();

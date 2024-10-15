@@ -93,7 +93,8 @@
        & {border-radius: .3rem;
         align-self: flex-start;}
       
-        &--registrar {
+        &--registrar, 
+        &--full {
             width: 100;
         }
     }

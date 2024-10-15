@@ -167,6 +167,31 @@ class RegistroController {
 
         $regalos = Regalo::all('ASC');
 
+
+        //manejando registro mediante POST
+        if($_SERVER['REQUEST_METHOD'] === 'POST') {
+           
+            //REVISAR QUE EL USUARIO ESTE AUTH.
+            if(!is_auth()) {
+                header('Location: /login');
+            }
+
+            $evento = explode(',', $_POST['eventos']);
+            if(empty($eventos)) {
+                echo json_encode(['resultado' => false]);
+                return;
+            }
+
+            //obtener el registro de usuario
+            $registro = Registro::where('usuario_id', $_SESSION['id']);
+            if(!isset($registro) || $registro->paquete_id !== "1") {
+                echo json_encode(['resultado' => false]);
+                return;
+            }
+
+            debuguear($registro);
+        }
+
         $router->render('registro/conferencias', [
             'titulo' => 'Elige Workshops y Conferencias',
             'eventos' => $eventos_formateados,
@@ -174,5 +199,4 @@ class RegistroController {
 
         ]);
     }
-
 }

@@ -53,7 +53,7 @@
 
                 <form id="registro" class="formulario">
                     <div class="formulario__campo">
-                        <input type="submit" class="formulario__submit" value="registrarme">
+                        <input type="submit" class="formulario__submit formulario__submit--full" value="Registrarme">
                     </div>
                 </form>
     </aside>

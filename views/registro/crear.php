@@ -13,7 +13,6 @@
 
             <form method="POST" action="/finalizar-registro/gratis">
                 <input class="paquetes__submit" type="submit" value="Inscripcion Gratis">
-
             </form>
         </div>
 

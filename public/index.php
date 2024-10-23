@@ -44,7 +44,7 @@ $router->get('/confirmar-cuenta', [AuthController::class, 'confirmar']);
 //dashboardadmin
 $router->get('/admin/dashboard', [DashboardController::class, 'index']);
 
-//ponentes
+//Ponentes
 $router->get('/admin/ponentes', [PonentesController::class, 'index']);
 $router->get('/admin/ponentes/crear', [PonentesController::class, 'crear']);
 $router->post('/admin/ponentes/crear', [PonentesController::class, 'crear']);
@@ -74,7 +74,9 @@ $router->get('/admin/regalos', [RegalosController::class, 'index']);
 //Registro de ususarios
 $router->get('/finalizar-registro', [RegistroController::class, 'crear']);
 $router->post('/finalizar-registro/gratis', [RegistroController::class, 'gratis']);
+
 $router->post('/finalizar-registro/pagar', [RegistroController::class, 'pagar']);
+
 $router->get('/finalizar-registro/conferencias', [RegistroController::class, 'conferencias']);
 $router->post('/finalizar-registro/conferencias', [RegistroController::class, 'conferencias']);
 

@@ -99,16 +99,31 @@ import Swal from "sweetalert2";
         //Objeto de formdata
         const datos = new FormData();
         datos.append('eventos', eventosId)
-        datos.append('regalo_Id', regaloId)
+        datos.append('regalo_id', regaloId)
 
         const url = '/finalizar-registro/conferencias';
         const respuesta = await fetch(url, {
             method: 'POST',
             body: datos
         })
+
         const resultado = await respuesta.json();
 
-        console.log(resultado)
+        if(resultado.resultado) {
+            Swal.fire(
+                'Registro Exitoso!',
+                'Tus conferencias se han almacenado y tu registro fue exitoso.',
+                'success'
+              ).then ( () => location.href = `/boleto?id=${resultado.token}`)
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Lo siento...",
+                text: "Hubo un error",
+                icon: "error",
+                confirmButtonText: 'OK'
+              }). then(() => location.reload());
+        }
     }
  }
 
